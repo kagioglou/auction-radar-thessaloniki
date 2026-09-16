@@ -211,8 +211,8 @@
 
       <section class="live-strip" id="live-changes">
         <div class="live-head">
-          <div class="live-title"><span class="live-dot"></span>LIVE πλειστηριασμοί eAuction24 — Θεσσαλονίκη</div>
-          <div class="live-meta">Τελευταία ενημέρωση: <b id="live-updated">δεν έχει εκτελεστεί ακόμη</b><br><span id="live-note">Η ενημέρωση γίνεται από το eAuction24 updater.</span></div>
+          <div class="live-title"><span class="live-dot"></span>LIVE πλειστηριασμοί — Θεσσαλονίκη</div>
+          <div class="live-meta">Τελευταία ενημέρωση: <b id="live-updated">δεν έχει εκτελεστεί ακόμη</b><br><span id="live-note">Η ενημέρωση γίνεται LIVE από eAuction24 + Delfi Properties.</span></div>
         </div>
         <div class="live-summary">
           <div class="live-card"><b id="live-active">—</b><span>ενεργές καταχωρήσεις</span></div>
@@ -296,7 +296,7 @@
         q('live-changed').textContent = d.changed_count ?? 0;
         q('live-removed').textContent = d.removed_count ?? 0;
         if (d.updated_at) q('live-updated').textContent = d.updated_at;
-        q('live-note').textContent = `LIVE έλεγχος eAuction24 · ${d.pages_checked ?? '—'} σελίδες ελέγχθηκαν`;
+        q('live-note').textContent = `LIVE έλεγχος eAuction24 + Delfi Properties · ${d.pages_checked ?? '—'} σελίδες ελέγχθηκαν`;
 
         const rows = Array.isArray(d.rows) ? d.rows : [];
         const cls = st => st==='ΝΕΟ'?'live-new':st==='ΑΛΛΑΓΗ'?'live-change':st==='ΑΦΑΙΡΕΘΗΚΕ'?'live-removed':'live-initial';
@@ -326,7 +326,7 @@
       }
 
       q('live-updated').textContent = 'γίνεται LIVE έλεγχος…';
-      q('live-note').textContent = 'Ανάκτηση τελευταίων πλειστηριασμών από eAuction24.';
+      q('live-note').textContent = 'Ανάκτηση τελευταίων πλειστηριασμών από eAuction24 + Delfi Properties.';
       q('live-table-body').innerHTML = '<tr><td colspan="7" class="live-empty">Φόρτωση LIVE δεδομένων…</td></tr>';
 
       try {
