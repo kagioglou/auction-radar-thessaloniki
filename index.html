@@ -200,10 +200,10 @@
         <button class="download" id="download-workbook" type="button">Κατέβασε το πλήρες Excel</button>
       </div>
       <div class="summary" aria-label="Σύνοψη">
-        <div class="stat"><b id="stat-total">—</b><span>πλειστηριασμοί</span></div>
-        <div class="stat"><b id="stat-eligible">—</b><span>κατάλληλοι για κατάταξη</span></div>
-        <div class="stat"><b id="stat-yield">—</b><span>καθαρή απόδοση ≥6%</span></div>
-        <div class="stat"><b id="stat-resale">—</b><span>περιθώριο μεταπώλησης ≥30%</span></div>
+        <div class="stat"><b id="stat-total">—</b><span>LIVE πλειστηριασμοί</span></div>
+        <div class="stat"><b id="stat-eligible">—</b><span>ανάλυση · κατάλληλοι για κατάταξη</span></div>
+        <div class="stat"><b id="stat-yield">—</b><span>ανάλυση · καθαρή απόδοση ≥6%</span></div>
+        <div class="stat"><b id="stat-resale">—</b><span>ανάλυση · μεταπώληση ≥30%</span></div>
       </div>
     </header>
 
@@ -292,11 +292,15 @@
 
       function renderData(d) {
         q('live-active').textContent = d.active_count ?? 0;
+        // Keep the headline total synchronized with the same LIVE dataset.
+        // The other headline metrics remain the original investment-analysis metrics
+        // until the API also provides the required rent/resale inputs per live row.
+        if (d.active_count != null) q('stat-total').textContent = d.active_count;
         q('live-new').textContent = d.new_count ?? 0;
         q('live-changed').textContent = d.changed_count ?? 0;
         q('live-removed').textContent = d.removed_count ?? 0;
         if (d.updated_at) q('live-updated').textContent = d.updated_at;
-        q('live-note').textContent = `LIVE έλεγχος eAuction24 + Delfi Properties · ${d.pages_checked ?? '—'} σελίδες ελέγχθηκαν`;
+        q('live-note').textContent = `LIVE έλεγχος eAuction24 + Delfi Properties · ${d.pages_checked ?? '—'} σελίδες · eAuction24: ${d.eauction24_count ?? '—'} · Delfi: ${d.delfi_count ?? '—'}`;
 
         const rows = Array.isArray(d.rows) ? d.rows : [];
         const cls = st => st==='ΝΕΟ'?'live-new':st==='ΑΛΛΑΓΗ'?'live-change':st==='ΑΦΑΙΡΕΘΗΚΕ'?'live-removed':'live-initial';
