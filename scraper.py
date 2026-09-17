@@ -218,6 +218,79 @@ def location_from_title(title: str) -> str:
     return parts[-1] if len(parts) >= 3 else ""
 
 
+def prosperty_card_title(anchor_text: str, card_text: str) -> str:
+    """Extract Prosperty's human-facing title including its location.
+
+    The category page normally exposes titles like:
+    ``Διαμέρισμα, 110 τ.μ., Ελευθέριο-Κορδελιό``.
+    The previous parser stopped at the first sqm token, which made distinct
+    listings look identical in the Radar.
+    """
+    property_type = (
+        r"Διαμέρισμα|Οροφοδιαμέρισμα|Μονοκατοικία|Μεζονέτα|Στούντιο|Λοφτ|"
+        r"Κατάστημα|Γραφείο|Αποθήκη|Οικόπεδο|Αγροτεμάχιο|Κτίριο|Κτήριο|"
+        r"Μεικτής Χρήσης|Εμπορικό|Apartment|House|Maisonette|Office|"
+        r"Warehouse|Retail(?:\s+Store)?|Land|Building|Mixed\s+Use"
+    )
+    texts = [clean_text(anchor_text), clean_text(card_text)]
+
+    for text in texts:
+        if not text:
+            continue
+        # Full category-card title: type + size + location.
+        m = re.search(
+            rf"((?:{property_type})\s*,\s*[\d.,]+\s*(?:τ\.?\s*μ\.?|sqm|m²)\s*,\s*[^€|]{{2,70}})",
+            text,
+            re.I,
+        )
+        if m:
+            return clean_text(m.group(1)).rstrip("-|")
+        # Title without an explicit location.
+        m = re.search(
+            rf"((?:{property_type})\s*,\s*[\d.,]+\s*(?:τ\.?\s*μ\.?|sqm|m²))",
+            text,
+            re.I,
+        )
+        if m:
+            return clean_text(m.group(1))
+
+    return title_from_text(card_text, clean_text(anchor_text) or "Ακίνητο")
+
+
+def prosperty_listing_fields(card_text: str) -> dict:
+    """Extract visible differentiators so duplicate filtering is conservative."""
+    floor = None
+    bedrooms = None
+    parking = None
+
+    floor_patterns = [
+        r"\b(Υπόγειο(?:\s+L\d+)?|Ισόγειο|Ημιώροφος|Μεσοπάτωμα|"
+        r"\d{1,2}ος\s+όροφος|\d{1,2}st\s+floor|\d{1,2}nd\s+floor|"
+        r"\d{1,2}rd\s+floor|\d{1,2}th\s+floor)\b"
+    ]
+    for pat in floor_patterns:
+        m = re.search(pat, card_text, re.I)
+        if m:
+            floor = clean_text(m.group(1))
+            break
+
+    m = re.search(r"(\d+)\s+(?:υ/δ|υπνοδωμάτια|bedrooms?)\b", card_text, re.I)
+    if m:
+        bedrooms = int(m.group(1))
+
+    m = re.search(
+        r"(\d+)\s+(?:θέσεις\s+πάρκινγκ|θέση\s+πάρκινγκ|parking\s+spaces?)\b",
+        card_text,
+        re.I,
+    )
+    if m:
+        parking = int(m.group(1))
+    elif re.search(r"\bparking\b|πάρκινγκ|θέση\s+πάρκινγκ", card_text, re.I):
+        parking = 1
+
+    return {"floor": floor, "bedrooms": bedrooms, "parking": parking}
+
+
 def scrape_prosperty(session: requests.Session) -> list[dict]:
     out: dict[str, dict] = {}
     for base in PROSPERTY_PAGES:
@@ -227,6 +300,7 @@ def scrape_prosperty(session: requests.Session) -> list[dict]:
             html = get(session, url)
             soup = BeautifulSoup(html, "lxml")
             before = len(out)
+
             for a in soup.find_all("a", href=re.compile(r"/listings/\d+/?")):
                 href = a.get("href") or ""
                 full = normalize_url(base, href)
@@ -234,31 +308,45 @@ def scrape_prosperty(session: requests.Session) -> list[dict]:
                 text = clean_text(card.get_text(" ", strip=True))
                 if not any(w.lower() in text.lower() for w in PROPERTY_WORDS):
                     continue
+
                 price = euro_from_text(text)
                 sqm = sqm_from_text(text)
-                title = title_from_text(text, a.get_text(" ", strip=True))
+                title = prosperty_card_title(a.get_text(" ", strip=True), text)
                 loc = location_from_title(title)
-                flags = [flag for flag in ["ΝΕΑ ΠΡΟΣΘΗΚΗ", "ΑΠΟΚΛΕΙΣΤΙΚΟ", "Ακίνητα EUROBANK", "ΧΡΥΣΗ ΒΙΖΑ", "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"] if flag.lower() in text.lower()]
-                # Deduplicate only the same Prosperty property URL.
-                # Do NOT use title + sqm + price: different properties can share
-                # those visible details.
-                dedupe_key = stable_key("Prosperty", full, title, sqm, price)
-                if dedupe_key in out:
-                    out[dedupe_key]["source_page"] = url
+                extra = prosperty_listing_fields(text)
+                flags = [
+                    flag for flag in [
+                        "ΝΕΑ ΠΡΟΣΘΗΚΗ", "ΑΠΟΚΛΕΙΣΤΙΚΟ", "Ακίνητα EUROBANK",
+                        "ΧΡΥΣΗ ΒΙΖΑ", "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+                    ]
+                    if flag.lower() in text.lower()
+                ]
+
+                # Canonical identity remains the actual Prosperty listing URL/ID.
+                # We only collapse entries later when their full visible property
+                # fingerprint is identical, so different same-sized listings survive.
+                key = stable_key("Prosperty", full, title, sqm, price)
+                if key in out:
+                    out[key]["source_page"] = url
                     continue
+
                 item = {
-                    "key": dedupe_key, "source": "Prosperty", "url": full, "title": title,
+                    "key": key, "source": "Prosperty", "url": full, "title": title,
                     "address": loc, "sqm": sqm, "price": price, "transaction": "Sale",
                     "type": title.split(",")[0], "flags": flags, "source_page": url,
+                    "floor": extra["floor"], "bedrooms": extra["bedrooms"],
+                    "parking": extra["parking"],
                 }
                 item["score_auto"] = auto_score(item)
-                out[dedupe_key] = item
+                out[key] = item
+
             if len(out) == before:
                 no_new_pages += 1
             else:
                 no_new_pages = 0
             if no_new_pages >= 2:
                 break
+
     return list(out.values())
 
 
@@ -434,24 +522,32 @@ def archive_previous_week(history: dict, current_week: str, now: str) -> dict | 
 
 
 def prosperty_signature(rec: dict) -> str:
-    """Stable identity for Prosperty history cleanup. Prefer the property URL.
-    Fall back to visible details only when no URL is available.
-    """
-    url = normalize_url("https://www.prosperty.gr", str(rec.get("url") or "").strip()) if rec.get("url") else ""
-    if url:
-        return "url:" + url.rstrip("/").lower()
+    """Rich visible-property fingerprint for conservative duplicate cleanup.
 
+    URL is deliberately NOT part of the fingerprint: historical scrape runs can
+    contain the same visible property under multiple listing URLs. Conversely,
+    location/floor/bedrooms/parking are included so genuinely different listings
+    that share type + size + price are not collapsed blindly.
+    """
     def norm(v) -> str:
         s = clean_text(str(v or "")).lower()
-        s = re.sub(r"[^\w\s.,-]", " ", s, flags=re.UNICODE)
+        s = re.sub(r"[^\w\s.,/-]", " ", s, flags=re.UNICODE)
         return re.sub(r"\s+", " ", s).strip()
 
-    raw = "|".join([norm(rec.get("title")), str(rec.get("sqm") or ""), str(rec.get("price") or "")])
-    return "fallback:" + hashlib.sha1(raw.encode("utf-8")).hexdigest()
+    raw = "|".join([
+        norm(rec.get("title")),
+        norm(rec.get("address")),
+        str(rec.get("sqm") or ""),
+        str(rec.get("price") or ""),
+        norm(rec.get("floor")),
+        str(rec.get("bedrooms") or ""),
+        str(rec.get("parking") or ""),
+    ])
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
 
 
 def cleanup_history_duplicates(history: dict) -> int:
-    """Remove legacy Prosperty duplicates by URL, preserving distinct properties."""
+    """Collapse legacy Prosperty records sharing the same rich visible fingerprint."""
     records = history.setdefault("records", {})
     groups: dict[str, list[tuple[str, dict]]] = {}
 
@@ -464,7 +560,15 @@ def cleanup_history_duplicates(history: dict) -> int:
     for sig, entries in groups.items():
         if len(entries) <= 1:
             continue
-        entries.sort(key=lambda kv: (bool(kv[1].get("active")), bool(kv[1].get("url")), str(kv[1].get("last_seen") or "")), reverse=True)
+        entries.sort(
+            key=lambda kv: (
+                bool(kv[1].get("active")),
+                bool(kv[1].get("url")),
+                len(str(kv[1].get("address") or "")),
+                str(kv[1].get("last_seen") or ""),
+            ),
+            reverse=True,
+        )
         _, keep = entries[0]
         canonical_key = keep.get("key") or entries[0][0]
         keep = dict(keep)
@@ -481,7 +585,7 @@ def merge(history: dict, source_results: dict[str, list[dict]], source_ok: dict[
     records = history.setdefault("records", {})
     current_keys_by_source: dict[str, set[str]] = {s:set() for s in source_results}
     out = []
-    tracked = ["title", "address", "sqm", "price", "auction_date", "transaction", "url"]
+    tracked = ["title", "address", "sqm", "price", "auction_date", "transaction", "url", "floor", "bedrooms", "parking"]
 
     for source, items in source_results.items():
         for item in items:
