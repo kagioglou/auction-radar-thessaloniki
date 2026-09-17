@@ -260,7 +260,7 @@ def scrape_prosperty(session: requests.Session) -> list[dict]:
                     "type": title.split(",")[0], "flags": flags, "source_page": url,
                 }
                 item["score_auto"] = auto_score(item)
-                out[key] = item
+                out[dedupe_key] = item
             if len(out) == before:
                 no_new_pages += 1
             else:
@@ -517,6 +517,19 @@ def merge(history: dict, source_results: dict[str, list[dict]], source_ok: dict[
             rec["score_auto"] = auto_score(rec)
             records[key] = rec
             out.append(rec)
+
+    # Final defensive collapse for Prosperty: if the same visible property
+    # appears under multiple URLs/keys, keep one active record.
+    seen_prosperty: dict[str, str] = {}
+    for key, rec in list(records.items()):
+        if rec.get("source") != "Prosperty" or rec.get("active") is False:
+            continue
+        sig = prosperty_signature(rec)
+        prev = seen_prosperty.get(sig)
+        if prev and prev != key:
+            records.pop(key, None)
+        else:
+            seen_prosperty[sig] = key
 
     # Mark missing records inactive only when that particular source scrape succeeded.
     for key, rec in list(records.items()):
