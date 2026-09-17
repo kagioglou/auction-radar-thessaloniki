@@ -1,0 +1,41 @@
+name: Update Auction Radar
+
+on:
+  schedule:
+    - cron: '17 * * * *'   # hourly; GitHub may delay scheduled jobs slightly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auction-radar-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Scrape sources and update history
+        run: python scraper.py
+      - name: Commit data changes
+        run: |
+          git config user.name "auction-radar-bot"
+          git config user.email "auction-radar-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "chore: update auction radar data"
+            git push
+          fi
