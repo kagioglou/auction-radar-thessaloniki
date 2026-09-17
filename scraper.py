@@ -50,7 +50,12 @@ PROSPERTY_PAGES = [
     "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
     "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
 ]
-DELFI_ROOT = "https://delfiproperties.gr/en/properties"
+DELFI_PAGES = [
+    "https://delfiproperties.gr/en/properties/auction/residential/",
+    "https://delfiproperties.gr/en/properties/auction/land/",
+    "https://delfiproperties.gr/en/properties/sale/residential/",
+    "https://delfiproperties.gr/en/properties/sale/land/",
+]
 
 # Thessaloniki + areas the C&H radar already treats as relevant.
 THESS_TERMS = [
@@ -234,9 +239,19 @@ def scrape_prosperty(session: requests.Session) -> list[dict]:
                 title = title_from_text(text, a.get_text(" ", strip=True))
                 loc = location_from_title(title)
                 flags = [flag for flag in ["ΝΕΑ ΠΡΟΣΘΗΚΗ", "ΑΠΟΚΛΕΙΣΤΙΚΟ", "Ακίνητα EUROBANK", "ΧΡΥΣΗ ΒΙΖΑ", "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"] if flag.lower() in text.lower()]
+                # Keep one row when the same Prosperty property is repeated
+                # across cards/pages with the same core details.
+                dedupe_raw = f"{title.lower()}|{loc.lower()}|{sqm}|{price}"
+                dedupe_key = "prosperty:sig:" + hashlib.sha1(
+                    dedupe_raw.encode("utf-8")
+                ).hexdigest()[:20]
                 key = stable_key("Prosperty", full, title, sqm, price)
+                if dedupe_key in out:
+                    # Prefer the first canonical URL, but keep the freshest source page.
+                    out[dedupe_key]["source_page"] = url
+                    continue
                 item = {
-                    "key": key, "source": "Prosperty", "url": full, "title": title,
+                    "key": dedupe_key, "source": "Prosperty", "url": full, "title": title,
                     "address": loc, "sqm": sqm, "price": price, "transaction": "Sale",
                     "type": title.split(",")[0], "flags": flags, "source_page": url,
                 }
@@ -305,53 +320,66 @@ def relevant_delfi(text: str) -> bool:
 
 def scrape_delfi(session: requests.Session) -> list[dict]:
     out: dict[str, dict] = {}
-    no_new_pages = 0
-    for page in range(1, 31):
-        # The site has historically accepted ?page=N; if it changes, the no-new guard prevents endless looping.
-        url = DELFI_ROOT if page == 1 else f"{DELFI_ROOT}?page={page}"
-        html = get(session, url)
-        soup = BeautifulSoup(html, "lxml")
-        before = len(out)
-        for a in soup.find_all("a", href=re.compile(r"/en/property/", re.I)):
-            href = a.get("href") or ""
-            full = normalize_url("https://delfiproperties.gr", href)
-            card = card_container(a, must_have=("€",))
-            text = clean_text(card.get_text(" ", strip=True))
-            if not relevant_delfi(text):
-                continue
-            price = euro_from_text(text)
-            sqm = sqm_from_text(text)
-            title = clean_text(a.get_text(" ", strip=True))
-            if len(title) < 4 or title.lower() in {"view property", "details"}:
-                h = card.find(re.compile(r"^h[2-6]$"))
-                title = clean_text(h.get_text(" ", strip=True) if h else "")
-            title = title or title_from_text(text)
-            # Extract location near the title; keeping the source text is useful if parsing changes.
-            address = ""
-            for term in ["Thessaloniki", "Kalamaria", "Thermi", "Oraiokastro", "Sindos", "Kardia", "Evosmos", "Pylaia"]:
-                m = re.search(rf"([^|€]{{0,80}}{re.escape(term)}[^|€]{{0,80}})", text, re.I)
-                if m:
-                    address = clean_text(m.group(1)); break
-            transaction = "Auction" if re.search(r"\bAuction\b", text, re.I) else "Sale"
-            flags = []
-            if "reduced" in text.lower() or "~~" in text:
-                flags.append("Reduced price")
-            if "reserved price" in text.lower():
-                flags.append("Reserved price")
-            key = stable_key("Delfi", full, title, sqm, price)
-            item = {
-                "key": key, "source": "Delfi", "url": full, "title": title,
-                "address": address, "sqm": sqm, "price": price, "transaction": transaction,
-                "type": title.split(" in ")[0], "flags": flags, "source_page": url,
-            }
-            item["score_auto"] = auto_score(item)
-            out[key] = item
-        if len(out) == before:
-            no_new_pages += 1
-        else:
-            no_new_pages = 0
-        if no_new_pages >= 2:
-            break
+    for base in DELFI_PAGES:
+        no_new_pages = 0
+        for page in range(1, 31):
+            url = base if page == 1 else f"{base}?page={page}"
+            html = get(session, url)
+            soup = BeautifulSoup(html, "lxml")
+            before = len(out)
+
+            for a in soup.find_all("a", href=re.compile(r"/en/property/", re.I)):
+                href = a.get("href") or ""
+                full = normalize_url("https://delfiproperties.gr", href)
+                card = card_container(a, must_have=("€",))
+                text = clean_text(card.get_text(" ", strip=True))
+
+                if not relevant_delfi(text):
+                    continue
+
+                price = euro_from_text(text)
+                sqm = sqm_from_text(text)
+                title = clean_text(a.get_text(" ", strip=True))
+                if len(title) < 4 or title.lower() in {"view property", "details"}:
+                    h = card.find(re.compile(r"^h[2-6]$"))
+                    title = clean_text(h.get_text(" ", strip=True) if h else "")
+                title = title or title_from_text(text)
+
+                address = ""
+                for term in THESS_TERMS:
+                    m = re.search(
+                        rf"([^|€]{{0,100}}{re.escape(term)}[^|€]{{0,100}})",
+                        text,
+                        re.I,
+                    )
+                    if m:
+                        address = clean_text(m.group(1))
+                        break
+
+                transaction = "Auction" if re.search(r"\bAuction\b", text, re.I) else "Sale"
+                flags = []
+                if "reduced" in text.lower() or "~~" in text:
+                    flags.append("Reduced price")
+                if "reserved price" in text.lower():
+                    flags.append("Reserved price")
+
+                key = stable_key("Delfi", full, title, sqm, price)
+                item = {
+                    "key": key, "source": "Delfi", "url": full, "title": title,
+                    "address": address, "sqm": sqm, "price": price,
+                    "transaction": transaction, "type": title.split(" in ")[0],
+                    "flags": flags, "source_page": url,
+                }
+                item["score_auto"] = auto_score(item)
+                out[key] = item
+
+            if len(out) == before:
+                no_new_pages += 1
+            else:
+                no_new_pages = 0
+            if no_new_pages >= 2:
+                break
+
     return list(out.values())
 
 
