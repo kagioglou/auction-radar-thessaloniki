@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-09-17T15:43:21+03:00",
+  "updated_at": "2026-09-17T15:49:59+03:00",
   "week": "2026-W38",
   "sources": {
     "eAuction24": {
       "ok": true,
       "count": 39,
-      "checked_at": "2026-09-17T15:43:21+03:00",
+      "checked_at": "2026-09-17T15:49:59+03:00",
       "error": null
     },
     "Prosperty": {
       "ok": true,
       "count": 204,
-      "checked_at": "2026-09-17T15:43:21+03:00",
+      "checked_at": "2026-09-17T15:49:59+03:00",
       "error": null
     },
     "Delfi": {
       "ok": false,
       "count": 0,
-      "checked_at": "2026-09-17T15:43:21+03:00",
+      "checked_at": "2026-09-17T15:49:59+03:00",
       "error": "0 listings parsed; source layout may have changed"
     }
   },
   "items": [
     {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19216/",
       "title": "Διαμέρισμα, 110 τ.μ.",
@@ -38,927 +38,15 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
       "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "NEW",
       "changes": []
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/14190/",
-      "title": "Διαμέρισμα, 55 τ.μ.",
-      "address": "",
-      "sqm": 55.0,
-      "price": 62000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
-      "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "NEW",
-      "changes": []
-    },
-    {
-      "key": "prosperty:sig:af3340eed46061fb848c",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/12317/",
-      "title": "Μονοκατοικία, 350 τ.μ.",
-      "address": "",
-      "sqm": 350.0,
-      "price": 445000.0,
-      "transaction": "Sale",
-      "type": "Μονοκατοικία",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
-      "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "NEW",
-      "changes": []
-    },
-    {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/13343/",
-      "title": "Διαμέρισμα, 123 τ.μ.",
-      "address": "",
-      "sqm": 123.0,
-      "price": 230000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "ΝΕΑ ΠΡΟΣΘΗΚΗ",
-        "ΑΠΟΚΛΕΙΣΤΙΚΟ",
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
-      "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "NEW",
-      "changes": []
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/19119/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19216/",
-          "to": "https://theprosperty.com/listings/19119/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/19116/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19119/",
-          "to": "https://theprosperty.com/listings/19116/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/19108/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19116/",
-          "to": "https://theprosperty.com/listings/19108/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/19101/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19108/",
-          "to": "https://theprosperty.com/listings/19101/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/19093/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19101/",
-          "to": "https://theprosperty.com/listings/19093/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/19085/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19093/",
-          "to": "https://theprosperty.com/listings/19085/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/19074/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19085/",
-          "to": "https://theprosperty.com/listings/19074/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/19072/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19074/",
-          "to": "https://theprosperty.com/listings/19072/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/18736/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/19072/",
-          "to": "https://theprosperty.com/listings/18736/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/18364/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/18736/",
-          "to": "https://theprosperty.com/listings/18364/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/18218/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/18364/",
-          "to": "https://theprosperty.com/listings/18218/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/18215/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/18218/",
-          "to": "https://theprosperty.com/listings/18215/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/18212/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/18215/",
-          "to": "https://theprosperty.com/listings/18212/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/18007/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/18212/",
-          "to": "https://theprosperty.com/listings/18007/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/17708/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/18007/",
-          "to": "https://theprosperty.com/listings/17708/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/17422/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/17708/",
-          "to": "https://theprosperty.com/listings/17422/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/17067/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/17422/",
-          "to": "https://theprosperty.com/listings/17067/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/16177/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/17067/",
-          "to": "https://theprosperty.com/listings/16177/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/16143/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/16177/",
-          "to": "https://theprosperty.com/listings/16143/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/16126/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/16143/",
-          "to": "https://theprosperty.com/listings/16126/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/15503/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/16126/",
-          "to": "https://theprosperty.com/listings/15503/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/15501/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/15503/",
-          "to": "https://theprosperty.com/listings/15501/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/15499/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/15501/",
-          "to": "https://theprosperty.com/listings/15499/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/14501/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/15499/",
-          "to": "https://theprosperty.com/listings/14501/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/14453/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/14501/",
-          "to": "https://theprosperty.com/listings/14453/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/14357/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/14453/",
-          "to": "https://theprosperty.com/listings/14357/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/14356/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/14357/",
-          "to": "https://theprosperty.com/listings/14356/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/14349/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/14356/",
-          "to": "https://theprosperty.com/listings/14349/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d1f830cd3b71006865a5",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/14210/",
-      "title": "Διαμέρισμα, 110 τ.μ.",
-      "address": "",
-      "sqm": 110.0,
-      "price": 120000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK",
-        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/14349/",
-          "to": "https://theprosperty.com/listings/14210/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19894/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -976,21 +64,998 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "NEW",
+      "changes": []
+    },
+    {
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/14190/",
+      "title": "Διαμέρισμα, 55 τ.μ.",
+      "address": "",
+      "sqm": 55.0,
+      "price": 62000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
+      "score_auto": 26.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "NEW",
+      "changes": []
+    },
+    {
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/12317/",
+      "title": "Μονοκατοικία, 350 τ.μ.",
+      "address": "",
+      "sqm": 350.0,
+      "price": 445000.0,
+      "transaction": "Sale",
+      "type": "Μονοκατοικία",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
+      "score_auto": 24.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "NEW",
+      "changes": []
+    },
+    {
+      "key": "prosperty:sig:5b450e23022041ec7789",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/20037/",
+      "title": "Διαμέρισμα, 64 τ.μ.",
+      "address": "",
+      "sqm": 64.0,
+      "price": 115000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "ΝΕΑ ΠΡΟΣΘΗΚΗ",
+        "Ακίνητα EUROBANK",
+        "ΧΡΥΣΗ ΒΙΖΑ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
+      "score_auto": 14.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "NEW",
+      "changes": []
+    },
+    {
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/13343/",
+      "title": "Διαμέρισμα, 123 τ.μ.",
+      "address": "",
+      "sqm": 123.0,
+      "price": 230000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "ΝΕΑ ΠΡΟΣΘΗΚΗ",
+        "ΑΠΟΚΛΕΙΣΤΙΚΟ",
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
+      "score_auto": 14.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "NEW",
+      "changes": []
+    },
+    {
+      "key": "prosperty:sig:f4e2ad12d4043de744bb",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/12102/",
+      "title": "Διαμέρισμα, 131 τ.μ.",
+      "address": "",
+      "sqm": 131.0,
+      "price": 300000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=3",
+      "score_auto": 8.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "NEW",
+      "changes": []
+    },
+    {
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/16336/",
+      "title": "Διαμέρισμα, 140 τ.μ.",
+      "address": "",
+      "sqm": 140.0,
+      "price": 650000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "ΝΕΑ ΠΡΟΣΘΗΚΗ",
+        "ΑΠΟΚΛΕΙΣΤΙΚΟ",
+        "Ακίνητα EUROBANK",
+        "ΧΡΥΣΗ ΒΙΖΑ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
+      "score_auto": 2.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "NEW",
+      "changes": []
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/19119/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
         {
           "field": "url",
-          "from": "https://theprosperty.com/listings/13636/",
-          "to": "https://theprosperty.com/listings/19894/"
+          "from": "https://theprosperty.com/listings/19216/",
+          "to": "https://theprosperty.com/listings/19119/"
         }
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/19116/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/19119/",
+          "to": "https://theprosperty.com/listings/19116/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/19108/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/19116/",
+          "to": "https://theprosperty.com/listings/19108/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/19101/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/19108/",
+          "to": "https://theprosperty.com/listings/19101/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/19093/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/19101/",
+          "to": "https://theprosperty.com/listings/19093/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/19085/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/19093/",
+          "to": "https://theprosperty.com/listings/19085/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/19074/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/19085/",
+          "to": "https://theprosperty.com/listings/19074/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/19072/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/19074/",
+          "to": "https://theprosperty.com/listings/19072/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/18736/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/19072/",
+          "to": "https://theprosperty.com/listings/18736/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/18364/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/18736/",
+          "to": "https://theprosperty.com/listings/18364/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/18218/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/18364/",
+          "to": "https://theprosperty.com/listings/18218/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/18215/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/18218/",
+          "to": "https://theprosperty.com/listings/18215/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/18212/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/18215/",
+          "to": "https://theprosperty.com/listings/18212/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/18007/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/18212/",
+          "to": "https://theprosperty.com/listings/18007/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/17708/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/18007/",
+          "to": "https://theprosperty.com/listings/17708/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/17422/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/17708/",
+          "to": "https://theprosperty.com/listings/17422/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/17067/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/17422/",
+          "to": "https://theprosperty.com/listings/17067/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/16177/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/17067/",
+          "to": "https://theprosperty.com/listings/16177/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/16143/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/16177/",
+          "to": "https://theprosperty.com/listings/16143/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/16126/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/16143/",
+          "to": "https://theprosperty.com/listings/16126/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/15503/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/16126/",
+          "to": "https://theprosperty.com/listings/15503/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/15501/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/15503/",
+          "to": "https://theprosperty.com/listings/15501/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/15499/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/15501/",
+          "to": "https://theprosperty.com/listings/15499/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/14501/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/15499/",
+          "to": "https://theprosperty.com/listings/14501/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/14453/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/14501/",
+          "to": "https://theprosperty.com/listings/14453/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/14357/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/14453/",
+          "to": "https://theprosperty.com/listings/14357/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/14356/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/14357/",
+          "to": "https://theprosperty.com/listings/14356/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/14349/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/14356/",
+          "to": "https://theprosperty.com/listings/14349/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:58d2b84e859bb1cab4d3",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/14210/",
+      "title": "Διαμέρισμα, 110 τ.μ.",
+      "address": "",
+      "sqm": 110.0,
+      "price": 120000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "Ακίνητα EUROBANK",
+        "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=3",
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T15:49:59+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-17T15:49:59+03:00",
+      "active": true,
+      "status": "CHANGE",
+      "changes": [
+        {
+          "field": "url",
+          "from": "https://theprosperty.com/listings/14349/",
+          "to": "https://theprosperty.com/listings/14210/"
+        }
+      ]
+    },
+    {
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18520/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1008,9 +1073,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1022,7 +1087,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18777/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1040,9 +1105,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1054,7 +1119,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18269/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1072,9 +1137,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1086,7 +1151,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17880/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1104,9 +1169,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1118,7 +1183,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17258/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1136,9 +1201,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1150,7 +1215,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14249/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1168,9 +1233,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1182,7 +1247,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/7626/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1200,9 +1265,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1214,7 +1279,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/7625/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1232,9 +1297,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1246,7 +1311,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/7624/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1264,9 +1329,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1278,7 +1343,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19911/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1296,9 +1361,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1310,7 +1375,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19105/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1328,9 +1393,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1342,7 +1407,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18528/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1360,9 +1425,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1374,7 +1439,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18206/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1392,9 +1457,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1406,7 +1471,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17788/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1424,9 +1489,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1438,7 +1503,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17768/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1456,9 +1521,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1470,7 +1535,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17722/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1488,9 +1553,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1502,7 +1567,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17718/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1520,9 +1585,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1534,7 +1599,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17620/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1552,9 +1617,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1566,7 +1631,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17618/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1584,9 +1649,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1598,7 +1663,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17590/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1616,9 +1681,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1630,7 +1695,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17303/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1648,9 +1713,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1662,7 +1727,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16910/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1680,9 +1745,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1694,7 +1759,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16381/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1712,9 +1777,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1726,7 +1791,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/15748/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1744,9 +1809,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1758,7 +1823,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/15683/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1776,9 +1841,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1790,7 +1855,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/15620/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1808,9 +1873,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1822,7 +1887,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13662/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1840,9 +1905,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1854,7 +1919,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13636/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1872,9 +1937,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1886,7 +1951,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9733df37e476046b3686",
+      "key": "prosperty:sig:d9f6c36fc9ca41cf24b5",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13582/",
       "title": "Μονοκατοικία, 151 τ.μ.",
@@ -1904,9 +1969,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
       "score_auto": 30.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1918,7 +1983,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14172/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -1933,9 +1998,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1947,7 +2012,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14111/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -1962,9 +2027,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -1976,7 +2041,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14064/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -1991,9 +2056,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2005,7 +2070,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14041/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2020,9 +2085,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2034,7 +2099,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14038/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2049,9 +2114,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2063,7 +2128,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13996/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2078,9 +2143,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2092,7 +2157,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13995/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2107,9 +2172,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2121,7 +2186,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13971/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2136,9 +2201,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2150,7 +2215,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13937/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2165,9 +2230,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2179,7 +2244,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13936/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2194,9 +2259,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2208,7 +2273,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13935/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2223,9 +2288,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2237,7 +2302,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13929/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2252,9 +2317,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2266,7 +2331,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13916/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2281,9 +2346,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2295,7 +2360,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13915/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2310,9 +2375,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2324,7 +2389,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13914/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2339,9 +2404,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2353,7 +2418,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13397/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2368,9 +2433,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2382,7 +2447,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13395/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2397,9 +2462,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2411,7 +2476,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13394/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2426,9 +2491,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2440,7 +2505,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13391/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2455,9 +2520,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2469,7 +2534,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13170/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2484,9 +2549,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2498,7 +2563,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13054/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2513,9 +2578,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2527,7 +2592,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13005/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2542,9 +2607,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2556,7 +2621,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12533/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2571,9 +2636,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2585,7 +2650,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12404/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2600,9 +2665,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2614,7 +2679,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12402/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2629,9 +2694,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2643,7 +2708,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12399/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2658,9 +2723,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2672,7 +2737,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12397/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2687,9 +2752,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2701,7 +2766,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12392/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2716,9 +2781,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2730,7 +2795,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:8423dea90cab9369f913",
+      "key": "prosperty:sig:ccdb92f7cb0107b13886",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12331/",
       "title": "Διαμέρισμα, 55 τ.μ.",
@@ -2745,9 +2810,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=4",
       "score_auto": 26.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2759,7 +2824,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12077/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -2774,9 +2839,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2788,7 +2853,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11889/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -2803,9 +2868,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2817,7 +2882,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11888/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -2832,9 +2897,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2846,7 +2911,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11887/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -2861,9 +2926,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2875,7 +2940,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11886/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -2890,9 +2955,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2904,7 +2969,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11885/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -2919,9 +2984,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2933,7 +2998,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11175/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -2948,9 +3013,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2962,7 +3027,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11168/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -2977,9 +3042,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -2991,7 +3056,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11166/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3006,9 +3071,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3020,7 +3085,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/10762/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3035,9 +3100,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3049,7 +3114,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/10681/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3064,9 +3129,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3078,7 +3143,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/10328/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3093,9 +3158,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3107,7 +3172,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/10154/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3122,9 +3187,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3136,7 +3201,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/10153/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3151,9 +3216,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3165,7 +3230,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/10151/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3180,9 +3245,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3194,7 +3259,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/8234/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3209,9 +3274,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3223,7 +3288,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/5916/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3238,9 +3303,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3252,7 +3317,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/1827/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3267,9 +3332,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3281,7 +3346,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:af3340eed46061fb848c",
+      "key": "prosperty:sig:c2ab13e54082ada6386d",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/3163/",
       "title": "Μονοκατοικία, 350 τ.μ.",
@@ -3296,9 +3361,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=5",
       "score_auto": 24.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3310,37 +3375,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/20037/",
-      "title": "Διαμέρισμα, 64 τ.μ.",
-      "address": "",
-      "sqm": 64.0,
-      "price": 115000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "ΝΕΑ ΠΡΟΣΘΗΚΗ",
-        "Ακίνητα EUROBANK",
-        "ΧΡΥΣΗ ΒΙΖΑ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
-      "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/12299/",
-          "to": "https://theprosperty.com/listings/20037/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/20033/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3356,9 +3391,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3370,7 +3405,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/20032/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3386,9 +3421,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3400,7 +3435,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19712/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3416,9 +3451,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3430,7 +3465,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19675/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3446,9 +3481,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3460,7 +3495,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19609/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3476,9 +3511,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3490,7 +3525,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19498/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3506,9 +3541,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3520,7 +3555,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19395/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3536,9 +3571,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3550,7 +3585,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19057/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3566,9 +3601,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3580,7 +3615,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18774/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3596,9 +3631,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3610,7 +3645,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18765/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3626,9 +3661,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3640,7 +3675,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18757/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3656,9 +3691,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3670,7 +3705,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18756/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3686,9 +3721,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3700,7 +3735,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18737/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3716,9 +3751,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3730,7 +3765,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18592/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3746,9 +3781,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3760,7 +3795,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17954/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3776,9 +3811,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3790,7 +3825,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17561/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3806,9 +3841,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3820,7 +3855,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17246/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3836,9 +3871,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3850,7 +3885,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17009/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3866,9 +3901,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3880,7 +3915,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16522/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3896,9 +3931,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3910,7 +3945,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16148/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3926,9 +3961,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3940,7 +3975,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16145/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3956,9 +3991,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -3970,7 +4005,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16140/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -3986,9 +4021,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4000,7 +4035,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16139/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -4016,9 +4051,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4030,7 +4065,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16138/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -4046,9 +4081,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4060,7 +4095,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16123/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -4076,9 +4111,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4090,7 +4125,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14322/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -4106,9 +4141,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4120,7 +4155,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14067/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -4136,9 +4171,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4150,7 +4185,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13649/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -4166,9 +4201,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4180,7 +4215,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:fdb7974f7c370cf09d7e",
+      "key": "prosperty:sig:5b450e23022041ec7789",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12299/",
       "title": "Διαμέρισμα, 64 τ.μ.",
@@ -4196,9 +4231,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4210,7 +4245,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12985/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4227,9 +4262,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4241,7 +4276,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12547/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4258,9 +4293,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4272,7 +4307,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12324/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4289,9 +4324,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4303,7 +4338,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12041/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4320,9 +4355,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4334,7 +4369,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/20067/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4351,9 +4386,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4365,7 +4400,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/20053/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4382,9 +4417,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4396,7 +4431,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/20038/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4413,9 +4448,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4427,7 +4462,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19967/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4444,9 +4479,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4458,7 +4493,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19900/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4475,9 +4510,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4489,7 +4524,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19897/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4506,9 +4541,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4520,7 +4555,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19896/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4537,9 +4572,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4551,7 +4586,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19747/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4568,9 +4603,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4582,7 +4617,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19729/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4599,9 +4634,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4613,7 +4648,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19514/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4630,9 +4665,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4644,7 +4679,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19511/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4661,9 +4696,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4675,7 +4710,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19509/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4692,9 +4727,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4706,7 +4741,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19508/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4723,9 +4758,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4737,7 +4772,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19506/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4754,9 +4789,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4768,7 +4803,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19505/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4785,9 +4820,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4799,7 +4834,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19504/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4816,9 +4851,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4830,7 +4865,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19503/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4847,9 +4882,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4861,7 +4896,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19502/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4878,9 +4913,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4892,7 +4927,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19501/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4909,9 +4944,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4923,7 +4958,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19500/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4940,9 +4975,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4954,7 +4989,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19410/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -4971,9 +5006,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -4985,7 +5020,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19336/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -5002,9 +5037,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5016,7 +5051,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19335/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -5033,9 +5068,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5047,7 +5082,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19333/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -5064,9 +5099,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5078,7 +5113,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:9c2ac3697044c5e0879f",
+      "key": "prosperty:sig:4d0964f9cb17d66dd8a2",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19219/",
       "title": "Διαμέρισμα, 123 τ.μ.",
@@ -5095,9 +5130,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
       "score_auto": 14.0,
-      "first_seen": "2026-09-17T15:43:21+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5109,35 +5144,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:080604ddc61c80a8f550",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/12102/",
-      "title": "Διαμέρισμα, 131 τ.μ.",
-      "address": "",
-      "sqm": 131.0,
-      "price": 300000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "Ακίνητα EUROBANK"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=3",
-      "score_auto": 8.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/3682/",
-          "to": "https://theprosperty.com/listings/12102/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:080604ddc61c80a8f550",
+      "key": "prosperty:sig:f4e2ad12d4043de744bb",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/11413/",
       "title": "Διαμέρισμα, 131 τ.μ.",
@@ -5151,9 +5158,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=3",
       "score_auto": 8.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5165,7 +5172,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:080604ddc61c80a8f550",
+      "key": "prosperty:sig:f4e2ad12d4043de744bb",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/10773/",
       "title": "Διαμέρισμα, 131 τ.μ.",
@@ -5179,9 +5186,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=3",
       "score_auto": 8.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5193,7 +5200,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:080604ddc61c80a8f550",
+      "key": "prosperty:sig:f4e2ad12d4043de744bb",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/3682/",
       "title": "Διαμέρισμα, 131 τ.μ.",
@@ -5207,9 +5214,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/?page=3",
       "score_auto": 8.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5221,38 +5228,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/16336/",
-      "title": "Διαμέρισμα, 140 τ.μ.",
-      "address": "",
-      "sqm": 140.0,
-      "price": 650000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "ΝΕΑ ΠΡΟΣΘΗΚΗ",
-        "ΑΠΟΚΛΕΙΣΤΙΚΟ",
-        "Ακίνητα EUROBANK",
-        "ΧΡΥΣΗ ΒΙΖΑ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
-      "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "url",
-          "from": "https://theprosperty.com/listings/20050/",
-          "to": "https://theprosperty.com/listings/16336/"
-        }
-      ]
-    },
-    {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/15681/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5269,9 +5245,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5283,7 +5259,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/14150/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5300,9 +5276,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5314,7 +5290,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/19725/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5331,9 +5307,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5345,7 +5321,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18775/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5362,9 +5338,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5376,7 +5352,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18762/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5393,9 +5369,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5407,7 +5383,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18368/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5424,9 +5400,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5438,7 +5414,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18367/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5455,9 +5431,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5469,7 +5445,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18365/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5486,9 +5462,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5500,7 +5476,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18363/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5517,9 +5493,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5531,7 +5507,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18361/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5548,9 +5524,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5562,7 +5538,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17786/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5579,9 +5555,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5593,7 +5569,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17286/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5610,9 +5586,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5624,7 +5600,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17129/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5641,9 +5617,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5655,7 +5631,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16624/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5672,9 +5648,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5686,7 +5662,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16471/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5703,9 +5679,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5717,7 +5693,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16339/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5734,9 +5710,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5748,7 +5724,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/15283/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5765,9 +5741,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5779,7 +5755,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/3588/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5796,9 +5772,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5810,7 +5786,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18712/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5827,9 +5803,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5841,7 +5817,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18349/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5858,9 +5834,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5872,7 +5848,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/18207/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5889,9 +5865,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5903,7 +5879,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/17717/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5920,9 +5896,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5934,7 +5910,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16380/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5951,9 +5927,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5965,7 +5941,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/16320/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -5982,9 +5958,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -5996,7 +5972,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/15527/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -6013,9 +5989,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -6027,7 +6003,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/13993/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -6044,9 +6020,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -6058,7 +6034,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/12764/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -6075,9 +6051,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -6089,7 +6065,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/20051/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -6106,9 +6082,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -6120,7 +6096,7 @@
       ]
     },
     {
-      "key": "prosperty:sig:d14b5ea7f1e1921e0c8b",
+      "key": "prosperty:sig:8aaaf389fcbc38bfb003",
       "source": "Prosperty",
       "url": "https://theprosperty.com/listings/20050/",
       "title": "Διαμέρισμα, 140 τ.μ.",
@@ -6137,9 +6113,9 @@
       ],
       "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
       "score_auto": 2.0,
-      "first_seen": "2026-09-17T14:22:24+03:00",
+      "first_seen": "2026-09-17T15:49:59+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "CHANGE",
       "changes": [
@@ -6166,7 +6142,7 @@
       "score_auto": 42.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6187,7 +6163,7 @@
       "score_auto": 42.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6208,7 +6184,7 @@
       "score_auto": 42.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6229,7 +6205,7 @@
       "score_auto": 37.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6250,7 +6226,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6271,7 +6247,7 @@
       "score_auto": 29.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6292,7 +6268,7 @@
       "score_auto": 17.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6313,7 +6289,7 @@
       "score_auto": 11.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6334,7 +6310,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6355,7 +6331,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6376,7 +6352,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6397,7 +6373,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6418,7 +6394,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6439,7 +6415,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6460,7 +6436,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6481,7 +6457,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6502,7 +6478,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6523,7 +6499,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6544,7 +6520,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6565,7 +6541,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6586,7 +6562,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6607,7 +6583,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6628,7 +6604,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6649,7 +6625,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6670,7 +6646,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6691,7 +6667,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6712,7 +6688,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6733,7 +6709,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6754,7 +6730,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6775,7 +6751,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6796,7 +6772,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6817,7 +6793,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6838,7 +6814,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6859,7 +6835,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6880,7 +6856,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6901,7 +6877,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6922,7 +6898,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6943,7 +6919,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -6964,7 +6940,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-17T15:43:21+03:00",
+      "last_seen": "2026-09-17T15:49:59+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
