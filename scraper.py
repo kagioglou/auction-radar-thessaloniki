@@ -188,7 +188,49 @@ def get(session: requests.Session, url: str, attempts: int = 3) -> str:
     raise RuntimeError(str(last))
 
 
+def _listing_ids_in(node: Tag) -> set[str]:
+    ids: set[str] = set()
+    if node.name == "a":
+        href = node.get("href") or ""
+        m = re.search(r"/listings/(\d+)", href)
+        if m:
+            ids.add(m.group(1))
+    for a in node.find_all("a", href=True):
+        href = a.get("href") or ""
+        m = re.search(r"/listings/(\d+)", href)
+        if m:
+            ids.add(m.group(1))
+    return ids
+
+
+def prosperty_card_container(anchor: Tag) -> Tag:
+    """Return the smallest DOM ancestor representing ONE Prosperty listing card.
+
+    The previous generic card_container() stopped at the first ancestor containing
+    a euro sign. On Prosperty's grid that can be a row/section containing several
+    listings, which makes every anchor inherit the first listing's title and price.
+    Here we isolate the smallest ancestor that contains exactly one unique
+    ``/listings/<id>`` URL and a visible property/price block.
+    """
+    node: Tag = anchor
+    fallback: Tag = anchor
+    for _ in range(10):
+        if not isinstance(node, Tag):
+            break
+        text = clean_text(node.get_text(" ", strip=True))
+        ids = _listing_ids_in(node)
+        fallback = node
+        if len(ids) == 1 and "€" in text and 20 <= len(text) <= 1400:
+            return node
+        parent = node.parent
+        if not isinstance(parent, Tag):
+            break
+        node = parent
+    return fallback
+
+
 def card_container(anchor: Tag, must_have: Iterable[str] = ("€",)) -> Tag:
+    # Kept for the other sources. Prosperty uses the stricter card finder above.
     node: Tag = anchor
     best = anchor
     for _ in range(7):
@@ -216,6 +258,39 @@ def location_from_title(title: str) -> str:
     # Common Prosperty form: "Apartment, 95 sqm, Kalamaria"
     parts = [clean_text(x) for x in title.split(",")]
     return parts[-1] if len(parts) >= 3 else ""
+
+
+def prosperty_price_from_card(text: str, sqm: float | None) -> float | None:
+    """Read Prosperty's CURRENT asking price, not a €/sqm value or a wrong sibling price.
+
+    Prosperty cards are rendered as: ``€140.000 €927/sqm Apartment, 151 sqm...``.
+    When more than one euro amount exists, choose the euro amount immediately before
+    the displayed €/sqm figure when possible; this also handles old/new price pairs.
+    """
+    text = clean_text(text)
+    price_matches = list(re.finditer(r"€\s*([\d.]+(?:,\d+)?)", text))
+    if not price_matches:
+        return None
+
+    # A displayed €/sqm value gives us a strong local anchor for the property price.
+    psm = re.search(r"€\s*([\d.]+(?:,\d+)?)\s*/\s*(?:τ\.?\s*μ\.?|sqm|m²)", text, re.I)
+    if psm:
+        psm_value = parse_number(psm.group(1))
+        before = [m for m in price_matches if m.start() < psm.start()]
+        if before:
+            candidate = before[-1]
+            price = parse_number(candidate.group(1))
+            if price is not None and sqm and psm_value:
+                # Prefer a candidate that is numerically consistent with Prosperty's own €/sqm.
+                expected = psm_value * sqm
+                if expected > 0 and abs(price - expected) / expected <= 0.08:
+                    return price
+            # Even if rounding/formatting makes the check fail, the nearest preceding euro
+            # amount is more likely to be the current price than an amount from another card.
+            return price
+
+    # Normal cards have the current asking price as the first euro amount.
+    return parse_number(price_matches[0].group(1))
 
 
 def prosperty_card_title(anchor_text: str, card_text: str) -> str:
@@ -304,13 +379,13 @@ def scrape_prosperty(session: requests.Session) -> list[dict]:
             for a in soup.find_all("a", href=re.compile(r"/listings/\d+/?")):
                 href = a.get("href") or ""
                 full = normalize_url(base, href)
-                card = card_container(a, must_have=("€",))
+                card = prosperty_card_container(a)
                 text = clean_text(card.get_text(" ", strip=True))
                 if not any(w.lower() in text.lower() for w in PROPERTY_WORDS):
                     continue
 
-                price = euro_from_text(text)
                 sqm = sqm_from_text(text)
+                price = prosperty_price_from_card(text, sqm)
                 title = prosperty_card_title(a.get_text(" ", strip=True), text)
                 loc = location_from_title(title)
                 extra = prosperty_listing_fields(text)
@@ -521,63 +596,36 @@ def archive_previous_week(history: dict, current_week: str, now: str) -> dict | 
     return {"week": prev, "saved_at": now, "total_records": len(rows), "new_records": new_count, "file": f"./data/weekly/{prev}.json"}
 
 
-def prosperty_signature(rec: dict) -> str:
-    """Rich visible-property fingerprint for conservative duplicate cleanup.
-
-    URL is deliberately NOT part of the fingerprint: historical scrape runs can
-    contain the same visible property under multiple listing URLs. Conversely,
-    location/floor/bedrooms/parking are included so genuinely different listings
-    that share type + size + price are not collapsed blindly.
-    """
-    def norm(v) -> str:
-        s = clean_text(str(v or "")).lower()
-        s = re.sub(r"[^\w\s.,/-]", " ", s, flags=re.UNICODE)
-        return re.sub(r"\s+", " ", s).strip()
-
-    raw = "|".join([
-        norm(rec.get("title")),
-        norm(rec.get("address")),
-        str(rec.get("sqm") or ""),
-        str(rec.get("price") or ""),
-        norm(rec.get("floor")),
-        str(rec.get("bedrooms") or ""),
-        str(rec.get("parking") or ""),
-    ])
-    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
-
-
 def cleanup_history_duplicates(history: dict) -> int:
-    """Collapse legacy Prosperty records sharing the same rich visible fingerprint."""
-    records = history.setdefault("records", {})
-    groups: dict[str, list[tuple[str, dict]]] = {}
+    """Remove only exact duplicate Prosperty URLs from legacy history.
 
+    Do NOT collapse by title/size/price/location. Prosperty can legitimately have
+    different listings with identical visible values, and the listing URL/ID is the
+    authoritative identity.
+    """
+    records = history.setdefault("records", {})
+    seen: dict[str, tuple[str, dict]] = {}
+    removed = 0
     for key, rec in list(records.items()):
         if rec.get("source") != "Prosperty":
             continue
-        groups.setdefault(prosperty_signature(rec), []).append((key, rec))
-
-    removed = 0
-    for sig, entries in groups.items():
-        if len(entries) <= 1:
+        url = str(rec.get("url") or "").rstrip("/").lower()
+        if not url:
             continue
-        entries.sort(
-            key=lambda kv: (
-                bool(kv[1].get("active")),
-                bool(kv[1].get("url")),
-                len(str(kv[1].get("address") or "")),
-                str(kv[1].get("last_seen") or ""),
-            ),
-            reverse=True,
-        )
-        _, keep = entries[0]
-        canonical_key = keep.get("key") or entries[0][0]
-        keep = dict(keep)
-        keep["key"] = canonical_key
-        records[canonical_key] = keep
-        for old_key, _ in entries:
-            if old_key != canonical_key:
-                records.pop(old_key, None)
-                removed += 1
+        prev = seen.get(url)
+        if prev is None:
+            seen[url] = (key, rec)
+            continue
+        prev_key, prev_rec = prev
+        # Keep the more recently seen/active copy.
+        keep_key, keep_rec = (key, rec) if (bool(rec.get("active")), str(rec.get("last_seen") or "")) > (bool(prev_rec.get("active")), str(prev_rec.get("last_seen") or "")) else (prev_key, prev_rec)
+        drop_key = prev_key if keep_key == key else key
+        if keep_key == key:
+            records[key] = dict(keep_rec)
+            records[key]["key"] = key
+            seen[url] = (key, records[key])
+        records.pop(drop_key, None)
+        removed += 1
     return removed
 
 
@@ -605,19 +653,6 @@ def merge(history: dict, source_results: dict[str, list[dict]], source_ok: dict[
             rec["score_auto"] = auto_score(rec)
             records[key] = rec
             out.append(rec)
-
-    # Final defensive collapse for Prosperty: if the same visible property
-    # appears under multiple URLs/keys, keep one active record.
-    seen_prosperty: dict[str, str] = {}
-    for key, rec in list(records.items()):
-        if rec.get("source") != "Prosperty" or rec.get("active") is False:
-            continue
-        sig = prosperty_signature(rec)
-        prev = seen_prosperty.get(sig)
-        if prev and prev != key:
-            records.pop(key, None)
-        else:
-            seen_prosperty[sig] = key
 
     # Mark missing records inactive only when that particular source scrape succeeded.
     for key, rec in list(records.items()):
