@@ -324,7 +324,19 @@ def scrape_delfi(session: requests.Session) -> list[dict]:
         no_new_pages = 0
         for page in range(1, 31):
             url = base if page == 1 else f"{base}?page={page}"
-            html = get(session, url)
+            try:
+                html = get(session, url)
+            except Exception as exc:
+                # A blocked category/page should not prevent other Delfi
+                # public categories from being checked.
+                print(f"Delfi page ERROR {url}: {exc}", file=sys.stderr)
+                no_new_pages += 1
+                if page == 1:
+                    break
+                if no_new_pages >= 2:
+                    break
+                continue
+
             soup = BeautifulSoup(html, "lxml")
             before = len(out)
 
@@ -332,35 +344,35 @@ def scrape_delfi(session: requests.Session) -> list[dict]:
                 href = a.get("href") or ""
                 full = normalize_url("https://delfiproperties.gr", href)
                 card = card_container(a, must_have=("€",))
-                text = clean_text(card.get_text(" ", strip=True))
+                card_text = clean_text(card.get_text(" ", strip=True))
 
-                if not relevant_delfi(text):
+                if not relevant_delfi(card_text):
                     continue
 
-                price = euro_from_text(text)
-                sqm = sqm_from_text(text)
+                price = euro_from_text(card_text)
+                sqm = sqm_from_text(card_text)
                 title = clean_text(a.get_text(" ", strip=True))
                 if len(title) < 4 or title.lower() in {"view property", "details"}:
                     h = card.find(re.compile(r"^h[2-6]$"))
                     title = clean_text(h.get_text(" ", strip=True) if h else "")
-                title = title or title_from_text(text)
+                title = title or title_from_text(card_text)
 
                 address = ""
                 for term in THESS_TERMS:
                     m = re.search(
                         rf"([^|€]{{0,100}}{re.escape(term)}[^|€]{{0,100}})",
-                        text,
+                        card_text,
                         re.I,
                     )
                     if m:
                         address = clean_text(m.group(1))
                         break
 
-                transaction = "Auction" if re.search(r"\bAuction\b", text, re.I) else "Sale"
+                transaction = "Auction" if re.search(r"\bAuction\b", card_text, re.I) else "Sale"
                 flags = []
-                if "reduced" in text.lower() or "~~" in text:
+                if "reduced" in card_text.lower() or "~~" in card_text:
                     flags.append("Reduced price")
-                if "reserved price" in text.lower():
+                if "reserved price" in card_text.lower():
                     flags.append("Reserved price")
 
                 key = stable_key("Delfi", full, title, sqm, price)
@@ -425,6 +437,58 @@ def archive_previous_week(history: dict, current_week: str, now: str) -> dict | 
     return {"week": prev, "saved_at": now, "total_records": len(rows), "new_records": new_count, "file": f"./data/weekly/{prev}.json"}
 
 
+def prosperty_signature(rec: dict) -> str:
+    raw = "|".join([
+        clean_text(str(rec.get("title") or "")).lower(),
+        clean_text(str(rec.get("address") or "")).lower(),
+        str(rec.get("sqm") or ""),
+        str(rec.get("price") or ""),
+    ])
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+
+
+def cleanup_history_duplicates(history: dict) -> int:
+    """Collapse legacy Prosperty duplicate records already stored in history."""
+    records = history.setdefault("records", {})
+    groups: dict[str, list[tuple[str, dict]]] = {}
+
+    for key, rec in list(records.items()):
+        if rec.get("source") != "Prosperty":
+            continue
+        groups.setdefault(prosperty_signature(rec), []).append((key, rec))
+
+    removed = 0
+    for sig, entries in groups.items():
+        if len(entries) <= 1:
+            continue
+
+        # Prefer the record with the richest URL/title/address data.
+        entries.sort(
+            key=lambda kv: (
+                bool(kv[1].get("url")),
+                len(str(kv[1].get("title") or "")),
+                len(str(kv[1].get("address") or "")),
+                str(kv[1].get("last_seen") or ""),
+            ),
+            reverse=True,
+        )
+        keep_key, keep = entries[0]
+        canonical_key = "prosperty:sig:" + sig[:20]
+
+        keep = dict(keep)
+        keep["key"] = canonical_key
+        records[canonical_key] = keep
+
+        for old_key, old in entries:
+            if old_key == canonical_key:
+                continue
+            # If the canonical record was not the old key, remove the old duplicate.
+            records.pop(old_key, None)
+            removed += 1
+
+    return removed
+
+
 def merge(history: dict, source_results: dict[str, list[dict]], source_ok: dict[str, bool], now: str, week: str) -> list[dict]:
     records = history.setdefault("records", {})
     current_keys_by_source: dict[str, set[str]] = {s:set() for s in source_results}
@@ -469,6 +533,9 @@ def main() -> int:
     now = iso_now()
     week = iso_week_key()
     history = load_json(HISTORY_FILE, {"version":1,"last_week_key":None,"records":{}})
+    removed_duplicates = cleanup_history_duplicates(history)
+    if removed_duplicates:
+        print(f"Removed legacy Prosperty duplicates: {removed_duplicates}")
 
     # Archive prior week BEFORE merging the new week's state.
     weekly_entry = archive_previous_week(history, week, now)
