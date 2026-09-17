@@ -239,19 +239,11 @@ def scrape_prosperty(session: requests.Session) -> list[dict]:
                 title = title_from_text(text, a.get_text(" ", strip=True))
                 loc = location_from_title(title)
                 flags = [flag for flag in ["ΝΕΑ ΠΡΟΣΘΗΚΗ", "ΑΠΟΚΛΕΙΣΤΙΚΟ", "Ακίνητα EUROBANK", "ΧΡΥΣΗ ΒΙΖΑ", "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"] if flag.lower() in text.lower()]
-                # Keep one row when the same Prosperty property is repeated
-                # across cards/pages with the same core details.
-                dedupe_raw = "|".join([
-                    re.sub(r"\s+", " ", clean_text(title)).lower(),
-                    str(sqm or ""),
-                    str(price or ""),
-                ])
-                dedupe_key = "prosperty:sig:" + hashlib.sha1(
-                    dedupe_raw.encode("utf-8")
-                ).hexdigest()[:20]
-                key = stable_key("Prosperty", full, title, sqm, price)
+                # Deduplicate only the same Prosperty property URL.
+                # Do NOT use title + sqm + price: different properties can share
+                # those visible details.
+                dedupe_key = stable_key("Prosperty", full, title, sqm, price)
                 if dedupe_key in out:
-                    # Prefer the first canonical URL, but keep the freshest source page.
                     out[dedupe_key]["source_page"] = url
                     continue
                 item = {
@@ -442,21 +434,24 @@ def archive_previous_week(history: dict, current_week: str, now: str) -> dict | 
 
 
 def prosperty_signature(rec: dict) -> str:
+    """Stable identity for Prosperty history cleanup. Prefer the property URL.
+    Fall back to visible details only when no URL is available.
+    """
+    url = normalize_url("https://www.prosperty.gr", str(rec.get("url") or "").strip()) if rec.get("url") else ""
+    if url:
+        return "url:" + url.rstrip("/").lower()
+
     def norm(v) -> str:
         s = clean_text(str(v or "")).lower()
         s = re.sub(r"[^\w\s.,-]", " ", s, flags=re.UNICODE)
         return re.sub(r"\s+", " ", s).strip()
 
-    raw = "|".join([
-        norm(rec.get("title")),
-        str(rec.get("sqm") or ""),
-        str(rec.get("price") or ""),
-    ])
-    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+    raw = "|".join([norm(rec.get("title")), str(rec.get("sqm") or ""), str(rec.get("price") or "")])
+    return "fallback:" + hashlib.sha1(raw.encode("utf-8")).hexdigest()
 
 
 def cleanup_history_duplicates(history: dict) -> int:
-    """Collapse legacy Prosperty duplicates using title + size + price."""
+    """Remove legacy Prosperty duplicates by URL, preserving distinct properties."""
     records = history.setdefault("records", {})
     groups: dict[str, list[tuple[str, dict]]] = {}
 
@@ -469,27 +464,16 @@ def cleanup_history_duplicates(history: dict) -> int:
     for sig, entries in groups.items():
         if len(entries) <= 1:
             continue
-
-        entries.sort(
-            key=lambda kv: (
-                bool(kv[1].get("active")),
-                bool(kv[1].get("url")),
-                len(str(kv[1].get("address") or "")),
-                str(kv[1].get("last_seen") or ""),
-            ),
-            reverse=True,
-        )
+        entries.sort(key=lambda kv: (bool(kv[1].get("active")), bool(kv[1].get("url")), str(kv[1].get("last_seen") or "")), reverse=True)
         _, keep = entries[0]
-        canonical_key = "prosperty:sig:" + sig[:20]
+        canonical_key = keep.get("key") or entries[0][0]
         keep = dict(keep)
         keep["key"] = canonical_key
         records[canonical_key] = keep
-
         for old_key, _ in entries:
             if old_key != canonical_key:
                 records.pop(old_key, None)
                 removed += 1
-
     return removed
 
 
