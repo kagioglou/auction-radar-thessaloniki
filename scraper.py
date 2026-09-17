@@ -241,7 +241,11 @@ def scrape_prosperty(session: requests.Session) -> list[dict]:
                 flags = [flag for flag in ["ΝΕΑ ΠΡΟΣΘΗΚΗ", "ΑΠΟΚΛΕΙΣΤΙΚΟ", "Ακίνητα EUROBANK", "ΧΡΥΣΗ ΒΙΖΑ", "ΥΠΟ ΚΑΤΑΣΚΕΥΗ"] if flag.lower() in text.lower()]
                 # Keep one row when the same Prosperty property is repeated
                 # across cards/pages with the same core details.
-                dedupe_raw = f"{title.lower()}|{loc.lower()}|{sqm}|{price}"
+                dedupe_raw = "|".join([
+                    re.sub(r"\s+", " ", clean_text(title)).lower(),
+                    str(sqm or ""),
+                    str(price or ""),
+                ])
                 dedupe_key = "prosperty:sig:" + hashlib.sha1(
                     dedupe_raw.encode("utf-8")
                 ).hexdigest()[:20]
@@ -438,9 +442,13 @@ def archive_previous_week(history: dict, current_week: str, now: str) -> dict | 
 
 
 def prosperty_signature(rec: dict) -> str:
+    def norm(v) -> str:
+        s = clean_text(str(v or "")).lower()
+        s = re.sub(r"[^\w\s.,-]", " ", s, flags=re.UNICODE)
+        return re.sub(r"\s+", " ", s).strip()
+
     raw = "|".join([
-        clean_text(str(rec.get("title") or "")).lower(),
-        clean_text(str(rec.get("address") or "")).lower(),
+        norm(rec.get("title")),
         str(rec.get("sqm") or ""),
         str(rec.get("price") or ""),
     ])
@@ -448,7 +456,7 @@ def prosperty_signature(rec: dict) -> str:
 
 
 def cleanup_history_duplicates(history: dict) -> int:
-    """Collapse legacy Prosperty duplicate records already stored in history."""
+    """Collapse legacy Prosperty duplicates using title + size + price."""
     records = history.setdefault("records", {})
     groups: dict[str, list[tuple[str, dict]]] = {}
 
@@ -462,29 +470,25 @@ def cleanup_history_duplicates(history: dict) -> int:
         if len(entries) <= 1:
             continue
 
-        # Prefer the record with the richest URL/title/address data.
         entries.sort(
             key=lambda kv: (
+                bool(kv[1].get("active")),
                 bool(kv[1].get("url")),
-                len(str(kv[1].get("title") or "")),
                 len(str(kv[1].get("address") or "")),
                 str(kv[1].get("last_seen") or ""),
             ),
             reverse=True,
         )
-        keep_key, keep = entries[0]
+        _, keep = entries[0]
         canonical_key = "prosperty:sig:" + sig[:20]
-
         keep = dict(keep)
         keep["key"] = canonical_key
         records[canonical_key] = keep
 
-        for old_key, old in entries:
-            if old_key == canonical_key:
-                continue
-            # If the canonical record was not the old key, remove the old duplicate.
-            records.pop(old_key, None)
-            removed += 1
+        for old_key, _ in entries:
+            if old_key != canonical_key:
+                records.pop(old_key, None)
+                removed += 1
 
     return removed
 
