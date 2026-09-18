@@ -200,6 +200,11 @@
 .status-chip2 { border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:11px; background:var(--panel); }
 .status-chip2.ok { color:#116040; background:#dff3e9; }
 .status-chip2.err { color:#8f2828; background:#fbe1e1; }
+
+.source-links-row { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 14px; }
+.source-link-pill { display:inline-flex; align-items:center; gap:5px; padding:7px 10px; border:1px solid var(--line); border-radius:999px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:11px; font-weight:800; }
+.source-link-pill:hover { text-decoration:underline; }
+
 .live-table-wrap2 { overflow:auto; max-height:520px; background:var(--panel); border-radius:12px; box-shadow:0 6px 22px rgba(23,32,51,.06); }
 .live-table2 { width:100%; border-collapse:collapse; font-size:12px; }
 .live-table2 th,.live-table2 td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
@@ -258,6 +263,7 @@
         <div class="live-card2"><b id="live-updated">—</b><span>Τελευταία ενημέρωση</span></div>
       </div>
       <div id="source-status" class="status-row"></div>
+      <div class="source-links-row" id="source-links-row" aria-label="Εξωτερικές πηγές"></div>
     </section>
 
     <nav class="tabs" aria-label="Ενότητες">
@@ -345,7 +351,7 @@
 'use strict';
 const legacy = JSON.parse(document.getElementById('legacy-data').textContent);
 const legacyRows = Array.isArray(legacy.rows) ? legacy.rows : [];
-let feed = {updated_at:'', sources:{}, items:[]};
+let feed = {updated_at:'', sources:{}, source_links:[], items:[]};
 let weekly = {snapshots:[]};
 let liveStatus='all';
 
@@ -395,6 +401,13 @@ function renderLive(){
    chips.push(`<span class="status-chip2 ${s.ok?'ok':'err'}"><strong>${esc(name)}</strong>: ${s.ok?'OK':'ERROR'} · ${num(s.count)}${s.error?' · '+esc(s.error):''}</span>`);
  }
  $('source-status').innerHTML=chips.join('')||'<span class="status-chip2">Δεν υπάρχουν στοιχεία πηγών.</span>';
+ const links = (feed.source_links && feed.source_links.length) ? feed.source_links : [
+   {name:'eAuction.gr',url:'https://www.eauction.gr/'},
+   {name:'iAuction Marketplace',url:'https://marketplace.iauction.gr/el/all/all/auction/?sort_by=weight.desc&zoom=7&page=1'},
+   {name:'Prosperty',url:'https://theprosperty.com/pwliseis-katoikiwn/'},
+   {name:'Delfi Properties',url:'https://delfiproperties.gr/en'}
+ ];
+ $('source-links-row').innerHTML=links.map(x=>`<a class="source-link-pill" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)} ↗</a>`).join('');
  const rows=filteredLive();
  $('live-table-body').innerHTML=rows.map(r=>`<tr><td>${statusBadge(r.status)}</td><td>${sourceBadge(r.source)}</td><td><strong>${esc(r.title||'Ακίνητο')}</strong><div class="muted">${esc((r.flags||[]).join(' · '))}</div></td><td>${esc(r.address||'—')}</td><td>${esc(r.auction_date||'—')}</td><td>${num(r.sqm)}</td><td><strong>${money(r.price)}</strong></td><td>${psm(r)?money(psm(r)):'—'}</td><td>${link(r)}</td></tr>`).join('')||'<tr><td colspan="9">Δεν υπάρχουν εγγραφές για τα φίλτρα.</td></tr>';
 }
