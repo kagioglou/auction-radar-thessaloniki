@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-09-18T19:27:08+03:00",
+  "updated_at": "2026-09-18T20:24:46+03:00",
   "week": "2026-W38",
   "sources": {
     "eAuction24": {
       "ok": true,
       "count": 39,
-      "checked_at": "2026-09-18T19:27:08+03:00",
+      "checked_at": "2026-09-18T20:24:46+03:00",
       "error": null
     },
     "Prosperty": {
       "ok": true,
       "count": 194,
-      "checked_at": "2026-09-18T19:27:08+03:00",
+      "checked_at": "2026-09-18T20:24:46+03:00",
       "error": null
     },
     "Delfi": {
       "ok": false,
       "count": 0,
-      "checked_at": "2026-09-18T19:27:08+03:00",
+      "checked_at": "2026-09-18T20:24:46+03:00",
       "error": "Delfi public pages are not reachable from this runner (HTTP/network block)."
     }
   },
@@ -41,144 +41,6 @@
   ],
   "items": [
     {
-      "key": "prosperty:/listings/20067",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/20067/",
-      "title": "Μεζονέτα, 131 τ.μ., Χορτιάτης 131 τ.μ. Ισόγειο 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
-      "address": "Χορτιάτης 131 τ.μ. Ισόγειο 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
-      "sqm": 131.0,
-      "price": 140000.0,
-      "transaction": "Sale",
-      "type": "Μεζονέτα",
-      "flags": [
-        "ΝΕΑ ΠΡΟΣΘΗΚΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
-      "floor": "Ισόγειο",
-      "bedrooms": 3,
-      "parking": null,
-      "score_auto": 32.0,
-      "first_seen": "2026-09-17T16:26:50+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "title",
-          "from": "Μεζονέτα, 110 τ.μ., Χορτιάτης 110 τ.μ. Ισόγειο 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
-          "to": "Μεζονέτα, 131 τ.μ., Χορτιάτης 131 τ.μ. Ισόγειο 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ"
-        },
-        {
-          "field": "address",
-          "from": "Χορτιάτης 110 τ.μ. Ισόγειο 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
-          "to": "Χορτιάτης 131 τ.μ. Ισόγειο 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ"
-        },
-        {
-          "field": "sqm",
-          "from": 110.0,
-          "to": 131.0
-        }
-      ]
-    },
-    {
-      "key": "prosperty:/listings/20038",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/20038/",
-      "title": "Διαμέρισμα, 96 τ.μ., Εχέδωρος 96 τ.μ. 4ος όροφος 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
-      "address": "Εχέδωρος 96 τ.μ. 4ος όροφος 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
-      "sqm": 96.0,
-      "price": 170000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "ΝΕΑ ΠΡΟΣΘΗΚΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
-      "floor": "4ος όροφος",
-      "bedrooms": 3,
-      "parking": null,
-      "score_auto": 14.0,
-      "first_seen": "2026-09-17T16:26:50+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "title",
-          "from": "Διαμέρισμα, 96 τ.μ., Εχέδωρος 96 τ.μ. ΝΕΑ ΠΡΟΣΘΗΚΗ",
-          "to": "Διαμέρισμα, 96 τ.μ., Εχέδωρος 96 τ.μ. 4ος όροφος 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ"
-        },
-        {
-          "field": "address",
-          "from": "Εχέδωρος 96 τ.μ. ΝΕΑ ΠΡΟΣΘΗΚΗ",
-          "to": "Εχέδωρος 96 τ.μ. 4ος όροφος 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ"
-        },
-        {
-          "field": "floor",
-          "from": null,
-          "to": "4ος όροφος"
-        },
-        {
-          "field": "bedrooms",
-          "from": null,
-          "to": 3
-        }
-      ]
-    },
-    {
-      "key": "prosperty:/listings/20051",
-      "source": "Prosperty",
-      "url": "https://theprosperty.com/listings/20051/",
-      "title": "Διαμέρισμα, 41 τ.μ., Άνω Πόλη 41 τ.μ. 3ος όροφος 1 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
-      "address": "Άνω Πόλη 41 τ.μ. 3ος όροφος 1 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
-      "sqm": 41.0,
-      "price": 130000.0,
-      "transaction": "Sale",
-      "type": "Διαμέρισμα",
-      "flags": [
-        "ΝΕΑ ΠΡΟΣΘΗΚΗ"
-      ],
-      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
-      "floor": "3ος όροφος",
-      "bedrooms": 1,
-      "parking": null,
-      "score_auto": 2.0,
-      "first_seen": "2026-09-17T16:26:50+03:00",
-      "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
-      "active": true,
-      "status": "CHANGE",
-      "changes": [
-        {
-          "field": "title",
-          "from": "Διαμέρισμα, 43 τ.μ., Άνω Πόλη 43 τ.μ. ΝΕΑ ΠΡΟΣΘΗΚΗ",
-          "to": "Διαμέρισμα, 41 τ.μ., Άνω Πόλη 41 τ.μ. 3ος όροφος 1 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ"
-        },
-        {
-          "field": "address",
-          "from": "Άνω Πόλη 43 τ.μ. ΝΕΑ ΠΡΟΣΘΗΚΗ",
-          "to": "Άνω Πόλη 41 τ.μ. 3ος όροφος 1 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ"
-        },
-        {
-          "field": "sqm",
-          "from": 43.0,
-          "to": 41.0
-        },
-        {
-          "field": "floor",
-          "from": null,
-          "to": "3ος όροφος"
-        },
-        {
-          "field": "bedrooms",
-          "from": null,
-          "to": 1
-        }
-      ]
-    },
-    {
       "key": "eauction24:/auction/16535",
       "source": "eAuction24",
       "url": "https://eauction24.gr/auction/16535",
@@ -194,7 +56,7 @@
       "score_auto": 42.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -215,7 +77,7 @@
       "score_auto": 42.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -236,7 +98,7 @@
       "score_auto": 42.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -257,7 +119,7 @@
       "score_auto": 37.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -282,7 +144,7 @@
       "score_auto": 37.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -307,7 +169,7 @@
       "score_auto": 37.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -328,7 +190,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -353,7 +215,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -376,7 +238,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:14:22+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": [],
@@ -405,7 +267,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -430,7 +292,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -455,7 +317,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -480,7 +342,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -505,7 +367,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -530,7 +392,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -555,7 +417,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -580,7 +442,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -602,7 +464,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:14:22+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": [],
@@ -630,7 +492,7 @@
       "score_auto": 35.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -652,7 +514,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:14:22+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": [],
@@ -678,7 +540,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -701,7 +563,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -726,7 +588,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -751,7 +613,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -776,7 +638,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -801,7 +663,32 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
+      "active": true,
+      "status": "ACTIVE",
+      "changes": []
+    },
+    {
+      "key": "prosperty:/listings/20067",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/20067/",
+      "title": "Μεζονέτα, 131 τ.μ., Χορτιάτης 131 τ.μ. Ισόγειο 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
+      "address": "Χορτιάτης 131 τ.μ. Ισόγειο 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
+      "sqm": 131.0,
+      "price": 140000.0,
+      "transaction": "Sale",
+      "type": "Μεζονέτα",
+      "flags": [
+        "ΝΕΑ ΠΡΟΣΘΗΚΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
+      "floor": "Ισόγειο",
+      "bedrooms": 3,
+      "parking": null,
+      "score_auto": 32.0,
+      "first_seen": "2026-09-17T16:26:50+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -826,7 +713,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -851,7 +738,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -876,7 +763,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -896,7 +783,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:14:22+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": [],
@@ -924,7 +811,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -947,7 +834,7 @@
       "score_auto": 32.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -972,7 +859,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -998,7 +885,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1023,7 +910,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1048,7 +935,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1071,7 +958,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1094,7 +981,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1119,7 +1006,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1144,7 +1031,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1169,7 +1056,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1194,7 +1081,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1219,7 +1106,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1244,7 +1131,7 @@
       "score_auto": 30.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1265,7 +1152,7 @@
       "score_auto": 29.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1290,7 +1177,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1315,7 +1202,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1337,7 +1224,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:14:22+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": [],
@@ -1363,7 +1250,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1388,7 +1275,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1413,7 +1300,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1438,7 +1325,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1461,7 +1348,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1484,7 +1371,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1507,7 +1394,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1530,7 +1417,7 @@
       "score_auto": 26.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1555,7 +1442,7 @@
       "score_auto": 24.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1581,7 +1468,7 @@
       "score_auto": 24.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1606,7 +1493,7 @@
       "score_auto": 24.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1631,7 +1518,7 @@
       "score_auto": 24.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1656,7 +1543,7 @@
       "score_auto": 24.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1679,7 +1566,7 @@
       "score_auto": 24.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1704,7 +1591,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1729,7 +1616,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1752,7 +1639,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1775,7 +1662,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1800,7 +1687,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1825,7 +1712,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1848,7 +1735,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1871,7 +1758,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1896,7 +1783,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1919,7 +1806,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1942,7 +1829,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1965,7 +1852,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -1988,7 +1875,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2011,7 +1898,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2034,7 +1921,7 @@
       "score_auto": 20.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2057,7 +1944,7 @@
       "score_auto": 18.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2082,7 +1969,7 @@
       "score_auto": 18.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2105,7 +1992,7 @@
       "score_auto": 18.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2128,7 +2015,7 @@
       "score_auto": 18.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2151,7 +2038,7 @@
       "score_auto": 18.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2172,7 +2059,7 @@
       "score_auto": 17.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2195,7 +2082,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2218,7 +2105,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2243,7 +2130,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2268,7 +2155,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2295,7 +2182,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2318,7 +2205,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2341,7 +2228,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2366,7 +2253,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2391,7 +2278,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2416,7 +2303,32 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
+      "active": true,
+      "status": "ACTIVE",
+      "changes": []
+    },
+    {
+      "key": "prosperty:/listings/20038",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/20038/",
+      "title": "Διαμέρισμα, 96 τ.μ., Εχέδωρος 96 τ.μ. 4ος όροφος 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
+      "address": "Εχέδωρος 96 τ.μ. 4ος όροφος 3 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
+      "sqm": 96.0,
+      "price": 170000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "ΝΕΑ ΠΡΟΣΘΗΚΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/?page=2",
+      "floor": "4ος όροφος",
+      "bedrooms": 3,
+      "parking": null,
+      "score_auto": 14.0,
+      "first_seen": "2026-09-17T16:26:50+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2441,7 +2353,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2466,7 +2378,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2491,7 +2403,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2516,7 +2428,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2541,7 +2453,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2566,7 +2478,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2591,7 +2503,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2616,7 +2528,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2641,7 +2553,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2663,7 +2575,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:14:22+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": [],
@@ -2691,7 +2603,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2714,7 +2626,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2739,7 +2651,7 @@
       "score_auto": 14.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2762,7 +2674,7 @@
       "score_auto": 12.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2787,7 +2699,7 @@
       "score_auto": 12.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2810,7 +2722,7 @@
       "score_auto": 12.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2835,7 +2747,7 @@
       "score_auto": 12.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2860,7 +2772,7 @@
       "score_auto": 12.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2883,7 +2795,7 @@
       "score_auto": 12.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2906,7 +2818,7 @@
       "score_auto": 12.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2927,7 +2839,7 @@
       "score_auto": 11.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2950,7 +2862,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2973,7 +2885,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -2996,7 +2908,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3019,7 +2931,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3044,7 +2956,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3067,7 +2979,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3090,7 +3002,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3113,7 +3025,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3136,7 +3048,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3159,7 +3071,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3182,7 +3094,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3205,7 +3117,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3228,7 +3140,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3253,7 +3165,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3278,7 +3190,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3303,7 +3215,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3328,7 +3240,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3353,7 +3265,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3376,7 +3288,7 @@
       "score_auto": 8.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3399,7 +3311,7 @@
       "score_auto": 6.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3422,7 +3334,7 @@
       "score_auto": 6.0,
       "first_seen": "2026-09-17T16:14:22+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": [],
@@ -3446,7 +3358,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3467,7 +3379,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3488,7 +3400,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3509,7 +3421,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3530,7 +3442,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3551,7 +3463,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3572,7 +3484,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3593,7 +3505,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3614,7 +3526,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3635,7 +3547,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3656,7 +3568,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3677,7 +3589,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3698,7 +3610,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3719,7 +3631,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3740,7 +3652,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3761,7 +3673,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3782,7 +3694,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3803,7 +3715,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3824,7 +3736,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3845,7 +3757,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3866,7 +3778,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3887,7 +3799,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3908,7 +3820,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3929,7 +3841,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3950,7 +3862,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3971,7 +3883,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -3992,7 +3904,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4013,7 +3925,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4034,7 +3946,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4055,7 +3967,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4076,7 +3988,7 @@
       "score_auto": 5.0,
       "first_seen": "2026-09-17T12:26:19+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4101,7 +4013,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4126,7 +4038,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4149,7 +4061,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4172,7 +4084,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4195,7 +4107,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4218,7 +4130,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4241,7 +4153,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4264,7 +4176,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4289,7 +4201,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4314,7 +4226,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4339,7 +4251,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4364,7 +4276,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4389,7 +4301,32 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
+      "active": true,
+      "status": "ACTIVE",
+      "changes": []
+    },
+    {
+      "key": "prosperty:/listings/20051",
+      "source": "Prosperty",
+      "url": "https://theprosperty.com/listings/20051/",
+      "title": "Διαμέρισμα, 41 τ.μ., Άνω Πόλη 41 τ.μ. 3ος όροφος 1 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
+      "address": "Άνω Πόλη 41 τ.μ. 3ος όροφος 1 υ/δ ΝΕΑ ΠΡΟΣΘΗΚΗ",
+      "sqm": 41.0,
+      "price": 130000.0,
+      "transaction": "Sale",
+      "type": "Διαμέρισμα",
+      "flags": [
+        "ΝΕΑ ΠΡΟΣΘΗΚΗ"
+      ],
+      "source_page": "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
+      "floor": "3ος όροφος",
+      "bedrooms": 1,
+      "parking": null,
+      "score_auto": 2.0,
+      "first_seen": "2026-09-17T16:26:50+03:00",
+      "first_seen_week": "2026-W38",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4412,7 +4349,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4437,7 +4374,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4460,7 +4397,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4483,7 +4420,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4506,7 +4443,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4529,7 +4466,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4552,7 +4489,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4575,7 +4512,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4600,7 +4537,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4623,7 +4560,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4646,7 +4583,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4671,7 +4608,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4696,7 +4633,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4719,7 +4656,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4744,7 +4681,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4767,7 +4704,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4792,7 +4729,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4817,7 +4754,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4842,7 +4779,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4867,7 +4804,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4892,7 +4829,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4917,7 +4854,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4942,7 +4879,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4967,7 +4904,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -4992,7 +4929,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5017,7 +4954,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5042,7 +4979,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5067,7 +5004,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5092,7 +5029,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5117,7 +5054,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5142,7 +5079,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5167,7 +5104,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5192,7 +5129,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5217,7 +5154,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5242,7 +5179,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5267,7 +5204,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5292,7 +5229,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5317,7 +5254,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5342,7 +5279,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5367,7 +5304,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5392,7 +5329,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5417,7 +5354,7 @@
       "score_auto": 2.0,
       "first_seen": "2026-09-17T16:46:11+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5442,7 +5379,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5464,7 +5401,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:14:22+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": [],
@@ -5490,7 +5427,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5513,7 +5450,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5538,7 +5475,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5564,7 +5501,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5589,7 +5526,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5614,7 +5551,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:46:11+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
@@ -5639,7 +5576,7 @@
       "score_auto": 0.0,
       "first_seen": "2026-09-17T16:26:50+03:00",
       "first_seen_week": "2026-W38",
-      "last_seen": "2026-09-18T19:27:08+03:00",
+      "last_seen": "2026-09-18T20:24:46+03:00",
       "active": true,
       "status": "ACTIVE",
       "changes": []
