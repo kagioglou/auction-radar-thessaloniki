@@ -277,13 +277,13 @@
 
     <section class="panel active" id="live-panel">
       <div class="panel-head">
-        <div><h2>LIVE ακίνητα & αλλαγές</h2><p>Η λίστα ελέγχει LIVE το Cloudflare Worker σε κάθε ανανέωση και κρατά το GitHub αρχείο ως εφεδρικό.</p></div>
+        <div><h2>LIVE ακίνητα & αλλαγές</h2><p>Η λίστα ελέγχει LIVE το Cloudflare Worker σε κάθε ανανέωση και κρατά το GitHub αρχείο ως εφεδρικό. Μπορείς να ταξινομήσεις κατά τιμή ή τ.μ.</p></div>
         <div class="legend"><span><i class="dot good"></i>Νέο</span><span><i class="dot mid"></i>Αλλαγή</span><span><i class="dot other"></i>Ενεργό</span></div>
       </div>
       <div class="toolbar">
         <div class="field"><label for="live-source-filter">Πηγή</label><select id="live-source-filter"><option value="all">Όλες οι πηγές</option><option value="eAuction24">eAuction.gr / eAuction24</option><option value="Prosperty">Prosperty</option><option value="iAuction">iAuction Marketplace</option><option value="Delfi">Delfi Properties</option></select></div>
         <div class="field"><label for="live-segment-filter">Περιοχή</label><select id="live-segment-filter"><option value="all">Όλες</option><option value="thessaloniki">Θεσσαλονίκη</option><option value="sindos_industrial">Σίνδος / ΒΙΠΕ / Βιομηχανικά</option><option value="athens">Αθήνα / Αττική</option></select></div>
-        <button id="live-refresh" type="button">Ανανέωση τώρα</button>
+        <div class="field"><label for="live-sort-filter">Ταξινόμηση</label><select id="live-sort-filter"><option value="price_desc">Τιμή: ακριβότερο → φθηνότερο</option><option value="price_asc">Τιμή: φθηνότερο → ακριβότερο</option><option value="sqm_desc">Τ.μ.: μεγαλύτερο → μικρότερο</option><option value="sqm_asc">Τ.μ.: μικρότερο → μεγαλύτερο</option></select></div><button id="live-refresh" type="button">Ανανέωση τώρα</button>
       </div>
       <div class="live-filter-row">
         <button class="live-filter-btn active" data-live-status="all">Όλα</button>
@@ -364,7 +364,9 @@ const num=v=>v==null||v===''?'—':new Intl.NumberFormat('el-GR',{maximumFractio
 const pct=v=>v==null||v===''?'—':new Intl.NumberFormat('el-GR',{style:'percent',minimumFractionDigits:2,maximumFractionDigits:2}).format(Number(v));
 const dt=s=>s?new Date(s):null;
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9α-ωάέήίόύώϊϋΐΰ]+/g,' ').trim();
-const psm=r=>r.price&&r.sqm?Number(r.price)/Number(r.sqm):null;
+const sqmValue=r=>{ const v=r?.sqm ?? r?.area; if(v!=null && v!=='' && Number.isFinite(Number(v))) return Number(v); const t=String(r?.title||'')+' '+String(r?.address||''); const m=t.match(/(\d+(?:[.,]\d+)?)\s*(?:τ\.?\s*μ\.?|sqm|m²|m2)\b/i); return m?Number(m[1].replace(',','.')):null; };
+const priceValue=r=>{ const v=r?.price ?? r?.starting_price ?? r?.startingPrice ?? r?.amount; const n=Number(v); return Number.isFinite(n)?n:null; };
+const psm=r=>priceValue(r)!=null&&sqmValue(r)!=null&&sqmValue(r)>0?priceValue(r)/sqmValue(r):null;
 
 function sourceBadge(s){
  const cls=s==='eAuction24'?'source-e':s==='Prosperty'?'source-p':s==='iAuction'?'source-i':'source-d';
@@ -387,6 +389,7 @@ function segmentOf(r){
 }
 function filteredLive(){
  const src=$('live-source-filter').value, seg=$('live-segment-filter').value;
+ const sort=$('live-sort-filter')?.value || 'price_desc';
  const srcMap={
    'eAuction24':'eAuction24',
    'Prosperty':'Prosperty',
@@ -394,10 +397,19 @@ function filteredLive(){
    'Delfi':'Delfi'
  };
  const internal=srcMap[src]||src;
- return (feed.items||[]).filter(r=>r.active!==false)
+ const rows=(feed.items||[]).filter(r=>r.active!==false)
    .filter(r=>src==='all'||r.source===internal)
    .filter(r=>seg==='all'||segmentOf(r)===seg)
    .filter(r=>liveStatus==='all'||String(r.status||'ACTIVE').toUpperCase()===liveStatus);
+ rows.sort((a,b)=>{
+   const av=sort.startsWith('price')?priceValue(a):sqmValue(a);
+   const bv=sort.startsWith('price')?priceValue(b):sqmValue(b);
+   if(av==null && bv==null) return 0;
+   if(av==null) return 1;
+   if(bv==null) return -1;
+   return sort.endsWith('_asc') ? av-bv : bv-av;
+ });
+ return rows;
 }
 function renderLive(){
  const active=(feed.items||[]).filter(r=>r.active!==false);
@@ -429,7 +441,7 @@ function renderLive(){
  const emptyHtml=sourceUrl && selected!=='all'
    ? `<tr><td colspan="9">Δεν υπάρχουν ακόμη εξαγμένες LIVE εγγραφές από αυτή την πηγή. <a href="${sourceUrl}" target="_blank" rel="noopener">Άνοιγμα πηγής ↗</a></td></tr>`
    : '<tr><td colspan="9">Δεν υπάρχουν εγγραφές για τα φίλτρα.</td></tr>';
- $('live-table-body').innerHTML=rows.map(r=>`<tr><td>${statusBadge(r.status)}</td><td>${sourceBadge(r.source)}</td><td><strong>${esc(r.title||'Ακίνητο')}</strong><div class="muted">${esc((r.flags||[]).join(' · '))}</div></td><td>${esc(r.address||'—')}</td><td>${esc(r.auction_date||'—')}</td><td>${num(r.sqm)}</td><td><strong>${money(r.price)}</strong></td><td>${psm(r)?money(psm(r)):'—'}</td><td>${link(r)}</td></tr>`).join('')||emptyHtml;
+ $('live-table-body').innerHTML=rows.map(r=>{ const sv=sqmValue(r); const pv=priceValue(r); return `<tr><td>${statusBadge(r.status)}</td><td>${sourceBadge(r.source)}</td><td><strong>${esc(r.title||'Ακίνητο')}</strong><div class="muted">${esc((r.flags||[]).join(' · '))}</div></td><td>${esc(r.address||'—')}</td><td>${esc(r.auction_date||'—')}</td><td>${sv!=null?num(sv):'—'}</td><td><strong>${pv!=null?money(pv):'—'}</strong></td><td>${psm(r)!=null?money(psm(r)):'—'}</td><td>${link(r)}</td></tr>`; }).join('')||emptyHtml;
 }
 function renderWeekly(){
  $('weekly-body').innerHTML=(weekly.snapshots||[]).map(w=>`<tr><td><strong>${esc(w.week)}</strong></td><td>${w.saved_at?new Date(w.saved_at).toLocaleString('el-GR'):'—'}</td><td>${num(w.total_records)}</td><td>${num(w.new_records)}</td><td><a href="${esc(w.file)}" target="_blank">JSON ↗</a></td></tr>`).join('')||'<tr><td colspan="5">Δεν υπάρχει ακόμη snapshot.</td></tr>';
@@ -626,6 +638,7 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
 }));
 $('live-source-filter').addEventListener('change',renderLive);
 $('live-segment-filter').addEventListener('change',renderLive);
+$('live-sort-filter').addEventListener('change',renderLive);
 document.querySelectorAll('[data-live-status]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-live-status]').forEach(x=>x.classList.toggle('active',x===b));liveStatus=b.dataset.liveStatus;renderLive();}));
 $('live-refresh').addEventListener('click',load);
 $('yield-filter').addEventListener('change',()=>renderMap('yield'));
