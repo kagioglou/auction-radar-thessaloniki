@@ -213,6 +213,7 @@
 .source-e { background:#eaf2ff; color:#1858a0; }
 .source-p { background:#eef8ec; color:#307230; }
 .source-d { background:#f6eefc; color:#6b3f8d; }
+.source-i { background:#fff4df; color:#8a5a00; }
 .status-new { background:#e2f5ed; color:#0b6c4d; }
 .status-change { background:#fff1cf; color:#8a5a00; }
 .status-active { background:#e8eef5; color:#4f6275; }
@@ -241,7 +242,7 @@
     <div class="hero-top">
       <div>
         <h1>C&H Auction Radar</h1>
-        <div class="subtitle">LIVE eAuction24 + Prosperty + Delfi Properties · Χάρτης · Απόδοση · Μεταπώληση · Νέα & αλλαγές</div>
+        <div class="subtitle">LIVE eAuction.gr + iAuction Marketplace + Prosperty + Delfi Properties · Χάρτης · Απόδοση · Μεταπώληση · Νέα & αλλαγές</div>
       </div>
       <button class="download" id="download-workbook" type="button">Κατέβασε το Excel</button>
     </div>
@@ -264,6 +265,7 @@
       </div>
       <div id="source-status" class="status-row"></div>
       <div class="source-links-row" id="source-links-row" aria-label="Εξωτερικές πηγές"></div>
+      <div class="source-links-row" style="margin-top:-4px;margin-bottom:12px"><span class="status-chip2 ok"><strong>4 πηγές:</strong> eAuction.gr · iAuction Marketplace · Prosperty · Delfi Properties</span></div>
     </section>
 
     <nav class="tabs" aria-label="Ενότητες">
@@ -279,7 +281,7 @@
         <div class="legend"><span><i class="dot good"></i>Νέο</span><span><i class="dot mid"></i>Αλλαγή</span><span><i class="dot other"></i>Ενεργό</span></div>
       </div>
       <div class="toolbar">
-        <div class="field"><label for="live-source-filter">Πηγή</label><select id="live-source-filter"><option value="all">Όλες</option><option value="eAuction24">eAuction24</option><option value="Prosperty">Prosperty</option><option value="Delfi">Delfi Properties</option></select></div>
+        <div class="field"><label for="live-source-filter">Πηγή</label><select id="live-source-filter"><option value="all">Όλες οι πηγές</option><option value="eAuction24">eAuction.gr / eAuction24</option><option value="Prosperty">Prosperty</option><option value="iAuction">iAuction Marketplace</option><option value="Delfi">Delfi Properties</option></select></div>
         <div class="field"><label for="live-segment-filter">Περιοχή</label><select id="live-segment-filter"><option value="all">Όλες</option><option value="thessaloniki">Θεσσαλονίκη</option><option value="sindos_industrial">Σίνδος / ΒΙΠΕ / Βιομηχανικά</option><option value="athens">Αθήνα / Αττική</option></select></div>
         <button id="live-refresh" type="button">Ανανέωση τώρα</button>
       </div>
@@ -365,8 +367,9 @@ const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLo
 const psm=r=>r.price&&r.sqm?Number(r.price)/Number(r.sqm):null;
 
 function sourceBadge(s){
- const cls=s==='eAuction24'?'source-e':s==='Prosperty'?'source-p':'source-d';
- return `<span class="source-badge ${cls}">${esc(s)}</span>`;
+ const cls=s==='eAuction24'?'source-e':s==='Prosperty'?'source-p':s==='iAuction'?'source-i':'source-d';
+ const label=s==='eAuction24'?'eAuction.gr / eAuction24':s==='Delfi'?'Delfi Properties':s;
+ return `<span class="source-badge ${cls}">${esc(label)}</span>`;
 }
 function statusBadge(s){
  const x=String(s||'ACTIVE').toUpperCase();
@@ -384,8 +387,15 @@ function segmentOf(r){
 }
 function filteredLive(){
  const src=$('live-source-filter').value, seg=$('live-segment-filter').value;
+ const srcMap={
+   'eAuction24':'eAuction24',
+   'Prosperty':'Prosperty',
+   'iAuction':'iAuction',
+   'Delfi':'Delfi'
+ };
+ const internal=srcMap[src]||src;
  return (feed.items||[]).filter(r=>r.active!==false)
-   .filter(r=>src==='all'||r.source===src)
+   .filter(r=>src==='all'||r.source===internal)
    .filter(r=>seg==='all'||segmentOf(r)===seg)
    .filter(r=>liveStatus==='all'||String(r.status||'ACTIVE').toUpperCase()===liveStatus);
 }
@@ -401,15 +411,25 @@ function renderLive(){
    chips.push(`<span class="status-chip2 ${s.ok?'ok':'err'}"><strong>${esc(name)}</strong>: ${s.ok?'OK':'ERROR'} · ${num(s.count)}${s.error?' · '+esc(s.error):''}</span>`);
  }
  $('source-status').innerHTML=chips.join('')||'<span class="status-chip2">Δεν υπάρχουν στοιχεία πηγών.</span>';
- const links = (feed.source_links && feed.source_links.length) ? feed.source_links : [
-   {name:'eAuction.gr',url:'https://www.eauction.gr/'},
-   {name:'iAuction Marketplace',url:'https://marketplace.iauction.gr/el/all/all/auction/?sort_by=weight.desc&zoom=7&page=1'},
-   {name:'Prosperty',url:'https://theprosperty.com/pwliseis-katoikiwn/'},
-   {name:'Delfi Properties',url:'https://delfiproperties.gr/en'}
+ const links = [
+   {name:'eAuction.gr',url:'https://www.eauction.gr/',note:'πλειστηριασμοί'},
+   {name:'iAuction Marketplace',url:'https://marketplace.iauction.gr/el/all/all/auction/?sort_by=weight.desc&zoom=7&page=1',note:'marketplace'},
+   {name:'Prosperty',url:'https://theprosperty.com/pwliseis-katoikiwn/',note:'πωλήσεις κατοικιών'},
+   {name:'Delfi Properties',url:'https://delfiproperties.gr/en',note:'πωλήσεις / auctions'}
  ];
- $('source-links-row').innerHTML=links.map(x=>`<a class="source-link-pill" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)} ↗</a>`).join('');
+ $('source-links-row').innerHTML=links.map(x=>`<a class="source-link-pill" href="${esc(x.url)}" target="_blank" rel="noopener"><strong>${esc(x.name)}</strong> · ${esc(x.note)} ↗</a>`).join('');
  const rows=filteredLive();
- $('live-table-body').innerHTML=rows.map(r=>`<tr><td>${statusBadge(r.status)}</td><td>${sourceBadge(r.source)}</td><td><strong>${esc(r.title||'Ακίνητο')}</strong><div class="muted">${esc((r.flags||[]).join(' · '))}</div></td><td>${esc(r.address||'—')}</td><td>${esc(r.auction_date||'—')}</td><td>${num(r.sqm)}</td><td><strong>${money(r.price)}</strong></td><td>${psm(r)?money(psm(r)):'—'}</td><td>${link(r)}</td></tr>`).join('')||'<tr><td colspan="9">Δεν υπάρχουν εγγραφές για τα φίλτρα.</td></tr>';
+ const selected=$('live-source-filter').value;
+ const sourceUrl={
+   'eAuction24':'https://www.eauction.gr/',
+   'Prosperty':'https://theprosperty.com/pwliseis-katoikiwn/',
+   'iAuction':'https://marketplace.iauction.gr/el/all/all/auction/?sort_by=weight.desc&zoom=7&page=1',
+   'Delfi':'https://delfiproperties.gr/en'
+ }[selected];
+ const emptyHtml=sourceUrl && selected!=='all'
+   ? `<tr><td colspan="9">Δεν υπάρχουν ακόμη εξαγμένες LIVE εγγραφές από αυτή την πηγή. <a href="${sourceUrl}" target="_blank" rel="noopener">Άνοιγμα πηγής ↗</a></td></tr>`
+   : '<tr><td colspan="9">Δεν υπάρχουν εγγραφές για τα φίλτρα.</td></tr>';
+ $('live-table-body').innerHTML=rows.map(r=>`<tr><td>${statusBadge(r.status)}</td><td>${sourceBadge(r.source)}</td><td><strong>${esc(r.title||'Ακίνητο')}</strong><div class="muted">${esc((r.flags||[]).join(' · '))}</div></td><td>${esc(r.address||'—')}</td><td>${esc(r.auction_date||'—')}</td><td>${num(r.sqm)}</td><td><strong>${money(r.price)}</strong></td><td>${psm(r)?money(psm(r)):'—'}</td><td>${link(r)}</td></tr>`).join('')||emptyHtml;
 }
 function renderWeekly(){
  $('weekly-body').innerHTML=(weekly.snapshots||[]).map(w=>`<tr><td><strong>${esc(w.week)}</strong></td><td>${w.saved_at?new Date(w.saved_at).toLocaleString('el-GR'):'—'}</td><td>${num(w.total_records)}</td><td>${num(w.new_records)}</td><td><a href="${esc(w.file)}" target="_blank">JSON ↗</a></td></tr>`).join('')||'<tr><td colspan="5">Δεν υπάρχει ακόμη snapshot.</td></tr>';
