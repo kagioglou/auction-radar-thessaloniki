@@ -50,11 +50,17 @@ PROSPERTY_PAGES = [
     "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki/",
     "https://theprosperty.com/pwliseis-katoikiwn/thessaloniki-proastia/",
 ]
+# Public Delfi Properties catalogue pages. We try the documented public English
+# paths first and the Greek equivalents as a second pass. No proxy/bypass is used.
 DELFI_PAGES = [
-    "https://delfiproperties.gr/en/properties/auction/residential/",
-    "https://delfiproperties.gr/en/properties/auction/land/",
-    "https://delfiproperties.gr/en/properties/sale/residential/",
-    "https://delfiproperties.gr/en/properties/sale/land/",
+    "https://delfiproperties.gr/en/properties/auction/residential",
+    "https://delfiproperties.gr/en/properties/auction/land",
+    "https://delfiproperties.gr/en/properties/sale/residential",
+    "https://delfiproperties.gr/en/properties/sale/land",
+    "https://delfiproperties.gr/gr/properties/auction/residential",
+    "https://delfiproperties.gr/gr/properties/auction/land",
+    "https://delfiproperties.gr/gr/properties/sale/residential",
+    "https://delfiproperties.gr/gr/properties/sale/land",
 ]
 
 # Thessaloniki + areas the C&H radar already treats as relevant.
@@ -473,73 +479,156 @@ def scrape_eauction24(session: requests.Session) -> list[dict]:
 
 
 def relevant_delfi(text: str) -> bool:
-    low = text.lower()
+    low = clean_text(text).lower()
     return any(term in low for term in THESS_TERMS)
+
+
+def delfi_price_from_text(text: str) -> float | None:
+    """Extract the CURRENT Delfi price, not the crossed-out old price.
+
+    Delfi often renders reduced prices as e.g. ``~~€12,000~~ €7,800``.
+    The generic euro_from_text() returns the first price, which would be wrong.
+    Prefer the last visible euro amount; for labelled starting-bid text prefer
+    the labelled value when present.
+    """
+    text = clean_text(text)
+    labelled = re.findall(
+        r"(?:Starting Bid|First Bid Price|Τιμή Πρώτης Προσφοράς|Price|Τιμή)\s*:?\s*€?\s*([\d.,]+)\s*€?",
+        text,
+        re.I,
+    )
+    if labelled:
+        # For Delfi detail/card text the labelled amount is normally the live/current amount.
+        val = parse_number(labelled[-1])
+        if val is not None:
+            return val
+    prices = re.findall(r"€\s*([\d.]+(?:,\d+)?)", text)
+    if prices:
+        for raw in reversed(prices):
+            val = parse_number(raw)
+            if val is not None:
+                return val
+    return None
+
+
+def delfi_reference(url: str, text: str = "") -> str | None:
+    m = re.search(r"/property/([^/?#]+)/?$", url, re.I)
+    if m:
+        slug = m.group(1).strip().lower()
+        # Keep the stable Delfi code when the slug starts with dp... .
+        code = re.match(r"(dp(?:-gr)?\d+)", slug, re.I)
+        return code.group(1).upper() if code else slug
+    m = re.search(r"\bDP(?:-GR)?\d{4,}\b", text, re.I)
+    return m.group(0).upper() if m else None
+
+
+def delfi_extract_title(a: Tag, card: Tag, card_text: str) -> str:
+    # Prefer heading in the card, then link text, then a property phrase.
+    h = card.find(re.compile(r"^h[1-6]$"))
+    htxt = clean_text(h.get_text(" ", strip=True)) if h else ""
+    atxt = clean_text(a.get_text(" ", strip=True))
+    bad = {"view property", "details", "προβολή ακινήτου", "λεπτομέρειες"}
+    for candidate in (htxt, atxt):
+        if candidate and candidate.lower() not in bad and len(candidate) >= 4:
+            # Avoid using a bare 'Available' label as title.
+            if candidate.lower() not in {"available", "διαθέσιμο"}:
+                return candidate
+    return title_from_text(card_text)
+
+
+def delfi_extract_address(card_text: str) -> str:
+    # Delfi cards conventionally include a location between price and property type.
+    # Capture a short window around the first matching Thessaloniki term.
+    low = card_text.lower()
+    for term in THESS_TERMS:
+        pos = low.find(term.lower())
+        if pos >= 0:
+            lo = max(0, pos - 90)
+            hi = min(len(card_text), pos + 130)
+            candidate = clean_text(card_text[lo:hi])
+            candidate = re.sub(r"^(?:Available|Auction|Sale)\s*", "", candidate, flags=re.I)
+            return candidate[:280]
+    return ""
 
 
 def scrape_delfi(session: requests.Session) -> list[dict]:
     out: dict[str, dict] = {}
+    success_pages = 0
+    blocked = []
+
     for base in DELFI_PAGES:
         no_new_pages = 0
         for page in range(1, 31):
             url = base if page == 1 else f"{base}?page={page}"
             try:
                 html = get(session, url)
+                success_pages += 1
             except Exception as exc:
-                # A blocked category/page should not prevent other Delfi
-                # public categories from being checked.
-                print(f"Delfi page ERROR {url}: {exc}", file=sys.stderr)
-                no_new_pages += 1
-                if page == 1:
-                    break
-                if no_new_pages >= 2:
-                    break
-                continue
+                blocked.append(f"{url}: {exc}")
+                # If the first page is blocked, don't waste 30 more requests on that path.
+                break
 
             soup = BeautifulSoup(html, "lxml")
             before = len(out)
 
-            for a in soup.find_all("a", href=re.compile(r"/en/property/", re.I)):
+            # Delfi's public catalogue links use /property/<slug> in both languages.
+            anchors = soup.find_all("a", href=re.compile(r"/property/", re.I))
+            for a in anchors:
                 href = a.get("href") or ""
                 full = normalize_url("https://delfiproperties.gr", href)
-                card = card_container(a, must_have=("€",))
-                card_text = clean_text(card.get_text(" ", strip=True))
-
-                if not relevant_delfi(card_text):
+                if "/property/" not in full.lower():
                     continue
 
-                price = euro_from_text(card_text)
-                sqm = sqm_from_text(card_text)
-                title = clean_text(a.get_text(" ", strip=True))
-                if len(title) < 4 or title.lower() in {"view property", "details"}:
-                    h = card.find(re.compile(r"^h[2-6]$"))
-                    title = clean_text(h.get_text(" ", strip=True) if h else "")
-                title = title or title_from_text(card_text)
-
-                address = ""
-                for term in THESS_TERMS:
-                    m = re.search(
-                        rf"([^|€]{{0,100}}{re.escape(term)}[^|€]{{0,100}})",
-                        card_text,
-                        re.I,
-                    )
-                    if m:
-                        address = clean_text(m.group(1))
+                card = card_container(a, must_have=())
+                # Walk up if the generic card is too small/noisy; choose the smallest
+                # ancestor containing one property link and a price/location block.
+                node: Tag = a
+                best = card
+                for _ in range(8):
+                    if not isinstance(node, Tag):
                         break
+                    txt = clean_text(node.get_text(" ", strip=True))
+                    ids = [x for x in node.find_all("a", href=True) if "/property/" in (x.get("href") or "")]
+                    if len(ids) == 1 and len(txt) <= 2200 and "€" in txt:
+                        best = node
+                        break
+                    parent = node.parent
+                    if not isinstance(parent, Tag):
+                        break
+                    node = parent
+                card = best
+                card_text = clean_text(card.get_text(" ", strip=True))
+                if not card_text or not relevant_delfi(card_text):
+                    continue
 
-                transaction = "Auction" if re.search(r"\bAuction\b", card_text, re.I) else "Sale"
+                price = delfi_price_from_text(card_text)
+                sqm = sqm_from_text(card_text)
+                title = delfi_extract_title(a, card, card_text)
+                address = delfi_extract_address(card_text)
+
+                transaction = "Auction" if re.search(r"\bAuction\b|Πλειστηριασ", card_text, re.I) else "Sale"
                 flags = []
-                if "reduced" in card_text.lower() or "~~" in card_text:
-                    flags.append("Reduced price")
-                if "reserved price" in card_text.lower():
+                low = card_text.lower()
+                if "reserved price" in low or "κατώτατη τιμή" in low:
                     flags.append("Reserved price")
+                if "reduced" in low or "μειω" in low or "~~" in card_text:
+                    flags.append("Reduced price")
 
-                key = stable_key("Delfi", full, title, sqm, price)
+                ref = delfi_reference(full, card_text)
+                key = f"delfi:{ref.lower()}" if ref else stable_key("Delfi", full, title, sqm, price)
                 item = {
-                    "key": key, "source": "Delfi", "url": full, "title": title,
-                    "address": address, "sqm": sqm, "price": price,
-                    "transaction": transaction, "type": title.split(" in ")[0],
-                    "flags": flags, "source_page": url,
+                    "key": key,
+                    "source": "Delfi",
+                    "url": full,
+                    "title": title,
+                    "address": address,
+                    "sqm": sqm,
+                    "price": price,
+                    "transaction": transaction,
+                    "type": title.split(" in ")[0].split(" στην ")[0].split(" στην ")[0],
+                    "flags": flags,
+                    "source_page": url,
+                    "reference": ref,
                 }
                 item["score_auto"] = auto_score(item)
                 out[key] = item
@@ -550,6 +639,11 @@ def scrape_delfi(session: requests.Session) -> list[dict]:
                 no_new_pages = 0
             if no_new_pages >= 2:
                 break
+
+    if not out:
+        if blocked:
+            raise RuntimeError("Delfi public pages are not reachable from this runner (HTTP/network block).")
+        raise RuntimeError("0 listings parsed; source layout may have changed")
 
     return list(out.values())
 
