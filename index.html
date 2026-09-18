@@ -1,1018 +1,2719 @@
-const BASE =
-  "https://www.eauction24.gr/auctions/" +
-  encodeURIComponent("Κεντρικής Μακεδονίας") + "/" +
-  encodeURIComponent("Θεσσαλονίκης");
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C&H Auction Radar — LIVE</title>
 
-const DELFI_RESIDENTIAL =
-  "https://delfiproperties.gr/en/properties/auction/residential";
-const DELFI_LAND =
-  "https://delfiproperties.gr/en/properties/auction/land";
+<link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-const cors = {
-  "Access-Control-Allow-Origin": "*",
-  "Content-Type": "application/json; charset=utf-8",
-  "Cache-Control": "no-store"
+<style>
+:root{
+  --bg:#f4f6f8;
+  --panel:#fff;
+  --ink:#172033;
+  --muted:#617083;
+  --line:#dce3ea;
+  --brand:#17365d;
+  --brand2:#245f8f;
+  --good:#16855b;
+  --mid:#e28a27;
+  --bad:#bd3b3b
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:14px Inter,Segoe UI,Arial,sans-serif
+}
+
+.shell{
+  width:min(1460px,100%);
+  margin:auto
+}
+
+.hero{
+  padding:26px 38px 22px;
+  color:#fff;
+  background:linear-gradient(120deg,var(--brand),var(--brand2))
+}
+
+.hero-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+  flex-wrap:wrap
+}
+
+h1{
+  margin:0;
+  font-size:34px
+}
+
+.subtitle{
+  margin-top:8px;
+  opacity:.88
+}
+
+.download,.tab,.toolbtn,select,button{
+  font:inherit
+}
+
+.download{
+  border:0;
+  border-radius:9px;
+  padding:10px 14px;
+  background:#fff;
+  color:var(--brand);
+  font-weight:800;
+  cursor:pointer
+}
+
+.summary{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:20px
+}
+
+.stat{
+  padding:12px 14px;
+  background:rgba(255,255,255,.13);
+  border-radius:11px
+}
+
+.stat b{
+  display:block;
+  font-size:25px
+}
+
+.stat span{
+  font-size:11px;
+  opacity:.82
+}
+
+.main{
+  padding:18px 28px 40px
+}
+
+.live-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-bottom:10px
+}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 14px
+}
+
+.card b{
+  display:block;
+  font-size:23px
+}
+
+.card span{
+  font-size:11px;
+  color:var(--muted)
+}
+
+.chips,.links{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:8px 0
+}
+
+.chip,.pill{
+  display:inline-flex;
+  gap:4px;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  font-size:11px;
+  font-weight:800
+}
+
+.chip.ok{
+  background:#dff3e9;
+  color:#116040
+}
+
+.chip.err{
+  background:#fbe1e1;
+  color:#8f2828
+}
+
+.pill{
+  background:#fff;
+  color:var(--ink);
+  text-decoration:none
+}
+
+.tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:16px 0
+}
+
+.tab{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  border-radius:10px;
+  padding:9px 15px;
+  font-weight:800;
+  cursor:pointer
+}
+
+.tab.active{
+  background:var(--brand);
+  color:#fff;
+  border-color:var(--brand)
+}
+
+.panel{
+  display:none
+}
+
+.panel.active{
+  display:block
+}
+
+.head{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:flex-end;
+  flex-wrap:wrap
+}
+
+.head h2{
+  margin:0;
+  font-size:22px
+}
+
+.muted{
+  color:var(--muted);
+  font-size:12px
+}
+
+.toolbar{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  margin:14px 0
+}
+
+.field{
+  min-width:210px
+}
+
+.field label{
+  display:block;
+  font-size:11px;
+  color:var(--muted);
+  margin-bottom:5px
+}
+
+.field select{
+  width:100%;
+  padding:9px 10px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+  color:var(--ink)
+}
+
+button.toolbtn{
+  padding:9px 12px;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:8px;
+  cursor:pointer
+}
+
+.filters{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin:8px 0
+}
+
+.fbtn{
+  padding:7px 10px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+  font-weight:800;
+  cursor:pointer
+}
+
+.fbtn.active{
+  background:var(--brand);
+  border-color:var(--brand);
+  color:#fff
+}
+
+.table-wrap{
+  overflow:auto;
+  max-height:560px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 6px 22px rgba(23,32,51,.06)
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12px
+}
+
+th,td{
+  padding:8px 9px;
+  border-bottom:1px solid #edf1f5;
+  text-align:left;
+  vertical-align:top
+}
+
+th{
+  position:sticky;
+  top:0;
+  background:#fff;
+  color:var(--muted);
+  z-index:2
+}
+
+.badge{
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:800
+}
+
+.b-active{
+  background:#e8eef5;
+  color:#4f6275
+}
+
+.b-new{
+  background:#e2f5ed;
+  color:#0b6c4d
+}
+
+.b-change{
+  background:#fff1cf;
+  color:#8a5a00
+}
+
+.b-removed{
+  background:#fde5e5;
+  color:#a12b2b
+}
+
+.src-e{
+  background:#eaf2ff;
+  color:#1858a0
+}
+
+.src-p{
+  background:#eef8ec;
+  color:#307230
+}
+
+.src-i{
+  background:#fff4df;
+  color:#8a5a00
+}
+
+.src-d{
+  background:#f6eefc;
+  color:#6b3f8d
+}
+
+.map-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 350px;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden
+}
+
+.map{
+  height:600px
+}
+
+.detail{
+  padding:18px;
+  border-left:1px solid var(--line);
+  overflow:auto
+}
+
+.metricgrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin:12px 0
+}
+
+.metric{
+  padding:10px;
+  border-radius:8px;
+  background:var(--bg)
+}
+
+.metric b{
+  display:block
+}
+
+.legend{
+  color:var(--muted);
+  font-size:11px
+}
+
+.note{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.5
+}
+
+@media(max-width:900px){
+  .summary,.live-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .map-layout{
+    grid-template-columns:1fr
+  }
+}
+
+@media(max-width:520px){
+  .hero{
+    padding:20px 14px
+  }
+
+  .main{
+    padding:14px 8px
+  }
+
+  .summary,.live-grid{
+    grid-template-columns:1fr 1fr
+  }
+
+  .field{
+    min-width:100%
+  }
+
+  .map{
+    height:440px
+  }
+
+  .map-layout{
+    grid-template-columns:1fr
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="shell">
+
+<header class="hero">
+
+  <div class="hero-top">
+
+    <div>
+
+      <h1>C&H Auction Radar</h1>
+
+      <div class="subtitle">
+        LIVE eAuction.gr + iAuction Marketplace + Prosperty + Delfi Properties
+        · Χάρτης · Απόδοση · Μεταπώληση · Νέα & αλλαγές
+      </div>
+
+    </div>
+
+    <button class="download" id="download">
+      Κατέβασε το Excel
+    </button>
+
+  </div>
+
+  <div class="summary">
+
+    <div class="stat">
+      <b id="stat-total">—</b>
+      <span>LIVE ενεργά ακίνητα</span>
+    </div>
+
+    <div class="stat">
+      <b id="stat-eligible">—</b>
+      <span>παλιά ανάλυση · κατάλληλα</span>
+    </div>
+
+    <div class="stat">
+      <b id="stat-yield">—</b>
+      <span>καθαρή απόδοση ≥6%</span>
+    </div>
+
+    <div class="stat">
+      <b id="stat-resale">—</b>
+      <span>μεταπώληση ≥30%</span>
+    </div>
+
+  </div>
+
+</header>
+
+<main class="main">
+
+<section>
+
+  <div class="live-grid">
+
+    <div class="card">
+      <b id="active">—</b>
+      <span>Ενεργά από όλες τις πηγές</span>
+    </div>
+
+    <div class="card">
+      <b id="newc">—</b>
+      <span>Νέα</span>
+    </div>
+
+    <div class="card">
+      <b id="changec">—</b>
+      <span>Αλλαγές</span>
+    </div>
+
+    <div class="card">
+      <b id="removedc">—</b>
+      <span>Αφαιρέθηκαν</span>
+    </div>
+
+    <div class="card">
+      <b id="updated">—</b>
+      <span>Τελευταία ενημέρωση</span>
+    </div>
+
+  </div>
+
+  <div id="source-status" class="chips"></div>
+
+  <div id="source-links" class="links"></div>
+
+</section>
+
+<nav class="tabs">
+
+  <button class="tab active" data-panel="live">
+    LIVE αγορά
+  </button>
+
+  <button class="tab" data-panel="yield">
+    Απόδοση μίσθωσης
+  </button>
+
+  <button class="tab" data-panel="resale">
+    Μεταπώληση
+  </button>
+
+</nav>
+
+<section class="panel active" id="live">
+
+  <div class="head">
+
+    <div>
+
+      <h2>LIVE ακίνητα & αλλαγές</h2>
+
+      <div class="muted">
+        Κάθε φόρτωση ελέγχει πρώτα το Cloudflare Worker.
+        Αν δεν απαντήσει, χρησιμοποιούνται τα τελευταία δεδομένα του GitHub.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="toolbar">
+
+    <div class="field">
+
+      <label>Πηγή</label>
+
+      <select id="source">
+
+        <option value="all">
+          Όλες οι πηγές
+        </option>
+
+        <option value="eAuction24">
+          eAuction24
+        </option>
+
+        <option value="Prosperty">
+          Prosperty
+        </option>
+
+        <option value="iAuction">
+          iAuction
+        </option>
+
+        <option value="Delfi">
+          Delfi
+        </option>
+
+      </select>
+
+    </div>
+
+    <div class="field">
+
+      <label>Περιοχή</label>
+
+      <select id="segment">
+
+        <option value="all">
+          Όλες
+        </option>
+
+        <option value="thessaloniki">
+          Θεσσαλονίκη
+        </option>
+
+        <option value="sindos_industrial">
+          Σίνδος / ΒΙΠΕ
+        </option>
+
+        <option value="athens">
+          Αθήνα / Αττική
+        </option>
+
+      </select>
+
+    </div>
+
+    <div class="field">
+
+      <label>Ταξινόμηση</label>
+
+      <select id="sort">
+
+        <option value="price_desc">
+          Τιμή: ακριβότερο → φθηνότερο
+        </option>
+
+        <option value="price_asc">
+          Τιμή: φθηνότερο → ακριβότερο
+        </option>
+
+        <option value="sqm_desc">
+          Τ.μ.: μεγαλύτερο → μικρότερο
+        </option>
+
+        <option value="sqm_asc">
+          Τ.μ.: μικρότερο → μεγαλύτερο
+        </option>
+
+      </select>
+
+    </div>
+
+    <button class="toolbtn" id="refresh">
+      Ανανέωση τώρα
+    </button>
+
+  </div>
+
+  <div class="filters">
+
+    <button class="fbtn active" data-status="all">
+      Όλα
+    </button>
+
+    <button class="fbtn" data-status="NEW">
+      Νέα
+    </button>
+
+    <button class="fbtn" data-status="CHANGE">
+      Αλλαγές
+    </button>
+
+    <button class="fbtn" data-status="ACTIVE">
+      Ενεργά
+    </button>
+
+    <button class="fbtn" data-status="REMOVED">
+      Αφαιρέθηκαν
+    </button>
+
+  </div>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>Status</th>
+          <th>Πηγή</th>
+          <th>Ακίνητο</th>
+          <th>Περιοχή</th>
+          <th>Ημ/νία</th>
+          <th>τ.μ.</th>
+          <th>Τιμή</th>
+          <th>€/τ.μ.</th>
+          <th>Link</th>
+        </tr>
+
+      </thead>
+
+      <tbody id="live-body"></tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+<section class="panel" id="yield">
+
+  <div class="head">
+
+    <div>
+
+      <h2>Χάρτης καθαρής απόδοσης</h2>
+
+      <div class="muted">
+        Παλιό C&H analysis dataset από το προηγούμενο λειτουργικό snapshot.
+      </div>
+
+    </div>
+
+    <div class="legend">
+      <b id="yield-count">—</b> ≥6%
+    </div>
+
+  </div>
+
+  <div class="toolbar">
+
+    <div class="field">
+
+      <label>Εμφάνιση</label>
+
+      <select id="yield-filter">
+
+        <option value="8">≥8%</option>
+
+        <option value="6" selected>
+          ≥6%
+        </option>
+
+        <option value="5">≥5%</option>
+
+        <option value="4">≥4%</option>
+
+        <option value="eligible">
+          Όλοι οι κατάλληλοι
+        </option>
+
+        <option value="all">
+          Όλοι
+        </option>
+
+      </select>
+
+    </div>
+
+    <button class="toolbtn" data-fit="yield">
+      Προβολή όλων
+    </button>
+
+  </div>
+
+  <div class="map-layout">
+
+    <div id="yield-map" class="map"></div>
+
+    <aside id="yield-detail" class="detail muted">
+      Επίλεξε σημείο.
+    </aside>
+
+  </div>
+
+  <div class="table-wrap" style="margin-top:16px">
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>#</th>
+          <th>Κωδικός / διεύθυνση</th>
+          <th>Τύπος</th>
+          <th>Τιμή</th>
+          <th>Ενοίκιο/μήνα</th>
+          <th>Καθαρή απόδοση</th>
+          <th>Συγκριτικά</th>
+        </tr>
+
+      </thead>
+
+      <tbody id="yield-body"></tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+<section class="panel" id="resale">
+
+  <div class="head">
+
+    <div>
+
+      <h2>Χάρτης περιθωρίου μεταπώλησης</h2>
+
+      <div class="muted">
+        Παλιό C&H analysis dataset από το προηγούμενο λειτουργικό snapshot.
+      </div>
+
+    </div>
+
+    <div class="legend">
+      <b id="resale-count">—</b> ≥30%
+    </div>
+
+  </div>
+
+  <div class="toolbar">
+
+    <div class="field">
+
+      <label>Εμφάνιση</label>
+
+      <select id="resale-filter">
+
+        <option value="50">
+          ≥50%
+        </option>
+
+        <option value="30" selected>
+          ≥30%
+        </option>
+
+        <option value="20">
+          ≥20%
+        </option>
+
+        <option value="eligible">
+          Όλοι οι κατάλληλοι
+        </option>
+
+        <option value="all">
+          Όλοι
+        </option>
+
+      </select>
+
+    </div>
+
+    <button class="toolbtn" data-fit="resale">
+      Προβολή όλων
+    </button>
+
+  </div>
+
+  <div class="map-layout">
+
+    <div id="resale-map" class="map"></div>
+
+    <aside id="resale-detail" class="detail muted">
+      Επίλεξε σημείο.
+    </aside>
+
+  </div>
+
+  <div class="table-wrap" style="margin-top:16px">
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>#</th>
+          <th>Κωδικός / διεύθυνση</th>
+          <th>Τύπος</th>
+          <th>Τιμή</th>
+          <th>Αξία μεταπώλησης</th>
+          <th>Κέρδος</th>
+          <th>Περιθώριο</th>
+        </tr>
+
+      </thead>
+
+      <tbody id="resale-body"></tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+<div class="note">
+
+  Οι τιμές, τα τ.μ. και οι ημερομηνίες εμφανίζονται μόνο όταν υπάρχουν
+  στα δεδομένα της πηγής ή σε αντίστοιχη επιβεβαιωμένη εγγραφή.
+  Δεν επινοούνται στοιχεία.
+
+</div>
+
+</main>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+(()=>{
+
+const $=id=>document.getElementById(id);
+
+const LIVE=
+  'https://auction-radar-live.kagioglou.workers.dev/api/live';
+
+const LEGACY_RAW=
+  'https://raw.githubusercontent.com/kagioglou/auction-radar-thessaloniki/144b0ed/index.html';
+
+let legacy={
+  rows:[],
+  summary:{}
 };
 
-function clean(s = "") {
-  return String(s)
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;|&#160;/gi, " ")
-    .replace(/&amp;/gi, "&")
-    .replace(/&quot;/gi, '"')
-    .replace(/&#39;|&apos;/gi, "'")
-    .replace(/&#8217;|&#x2019;/gi, "'")
-    .replace(/&euro;|&#8364;|&#x20ac;/gi, "€")
-    .replace(/\s+/g, " ")
-    .trim();
-}
+let feed={
+  items:[],
+  sources:{}
+};
 
-function numberGR(s) {
-  if (s == null) return null;
+let status='all';
 
-  let v = String(s).replace(/\s/g, "").trim();
+let maps={};
 
-  if (!v) return null;
+const esc=v=>
+  String(v??'')
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
 
-  if (v.includes(",") && v.includes(".")) {
-    v = v.replace(/\./g, "").replace(",", ".");
-  } else if (v.includes(",")) {
-    v = v.replace(",", ".");
-  }
-
-  const n = Number(v);
-
-  return Number.isFinite(n) ? n : null;
-}
-
-function parsePrice(s) {
-  if (s == null) return null;
-
-  let v = String(s)
-    .replace(/€/g, "")
-    .replace(/\s/g, "")
+const norm=s=>
+  String(s??'')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .replace(/\s+/g,' ')
     .trim();
 
-  if (!v) return null;
+const fmtMoney=v=>
+  v==null||!Number.isFinite(Number(v))
+    ? '—'
+    : new Intl.NumberFormat(
+        'el-GR',
+        {
+          style:'currency',
+          currency:'EUR',
+          maximumFractionDigits:0
+        }
+      ).format(Number(v));
 
-  if (/^\d{1,3}(,\d{3})+$/.test(v)) {
-    return Number(v.replace(/,/g, ""));
-  }
+const fmtNum=v=>
+  v==null||!Number.isFinite(Number(v))
+    ? '—'
+    : new Intl.NumberFormat(
+        'el-GR',
+        {
+          maximumFractionDigits:2
+        }
+      ).format(Number(v));
 
-  if (/^\d{1,3}(\.\d{3})+$/.test(v)) {
-    return Number(v.replace(/\./g, ""));
-  }
+const fmtPct=v=>
+  v==null||!Number.isFinite(Number(v))
+    ? '—'
+    : new Intl.NumberFormat(
+        'el-GR',
+        {
+          style:'percent',
+          maximumFractionDigits:1
+        }
+      ).format(Number(v));
 
-  if (v.includes(",") && !/,\d{3}$/.test(v)) {
-    v = v.replace(",", ".");
-  }
+function numberValue(v){
 
-  const n = Number(v);
+  if(v==null||v==='')
+    return null;
 
-  return Number.isFinite(n) ? n : null;
-}
+  const n=Number(v);
 
-function parseDelfiSqmValue(s) {
-  if (s == null) return null;
-
-  let v = String(s)
-    .replace(/\s/g, "")
-    .trim();
-
-  if (!v) return null;
-
-  /*
-    5.250  -> 5250
-    17.480 -> 17480
-
-    115.25 -> 115.25
-    341.40 -> 341.40
-  */
-
-  if (/^\d{1,3}\.\d{3}$/.test(v)) {
-    return Number(v.replace(".", ""));
-  }
-
-  if (v.includes(",") && v.includes(".")) {
-    v = v.replace(/\./g, "").replace(",", ".");
-  } else if (v.includes(",")) {
-    v = v.replace(",", ".");
-  }
-
-  const n = Number(v);
-
-  return Number.isFinite(n) && n > 0 && n < 100000
+  return Number.isFinite(n)
     ? n
     : null;
 }
 
-function absoluteUrl(href, base) {
-  if (!href) return "";
+function parseMoneyText(text){
 
-  try {
-    return new URL(href, base).href;
-  } catch {
-    return "";
-  }
+  const t=String(text||'');
+
+  const m=t.match(
+    /€\s*([\d.,]+)/
+  );
+
+  if(!m)
+    return null;
+
+  let s=m[1];
+
+  if(
+    /^\d{1,3}(?:\.\d{3})+$/.test(s)
+  )
+    s=s.replace(/\./g,'');
+
+  else if(
+    /^\d{1,3}(?:,\d{3})+$/.test(s)
+  )
+    s=s.replace(/,/g,'');
+
+  else if(
+    /^\d+,\d{1,2}$/.test(s)
+  )
+    s=s.replace(',','.');
+
+  else
+    s=s.replace(/[^0-9.-]/g,'');
+
+  const n=Number(s);
+
+  return Number.isFinite(n)
+    ? n
+    : null;
 }
 
+function sqmText(text){
 
-/* =========================================================
-   eAuction24
-   ========================================================= */
+  const m=
+    String(text||'').match(
+      /(\d+(?:[.,]\d+)?)\s*(?:τ\.?\s*μ\.?|sqm|m²|m2)\b/i
+    );
 
-function parseCards(html) {
-  const results = [];
+  if(!m)
+    return null;
 
-  const re =
-    /<h5[^>]*>\s*([\s\S]*?)<\/h5>([\s\S]*?)(?=<h5[^>]*>|class=["'][^"']*pagination|Πλειστηριασμοί ακινήτων|$)/gi;
+  const n=
+    Number(
+      m[1].replace(',','.')
+    );
 
-  let m;
+  return Number.isFinite(n)
+    ? n
+    : null;
+}
 
-  while ((m = re.exec(html)) !== null) {
+function enrich(r){
 
-    const title = clean(m[1]);
-    const block = m[0];
-    const body = clean(m[2]);
+  const x={...r};
 
-    if (
-      !/(Κατοικία|Κατάστημα|Γραφείο|Αποθήκη|Οικόπεδο|Επαγγελμα|Αγροτεμάχιο)/i.test(
-        title
-      )
-    ) {
-      continue;
-    }
+  const text=[
+    x.title,
+    x.address,
+    x.location,
+    x.description
+  ]
+    .filter(Boolean)
+    .join(' ');
 
-    const sqmMatch =
-      (title + " " + body).match(
-        /(\d+(?:[.,]\d+)?)\s*τ\.?\s*μ\.?/i
+  let s=
+    numberValue(
+      x.sqm ??
+      x.area
+    );
+
+  if(!(s>0))
+    s=sqmText(text);
+
+  x.sqm=
+    s>0
+      ? s
+      : null;
+
+  let p=
+    numberValue(
+      x.price ??
+      x.starting_price ??
+      x.startingPrice ??
+      x.amount
+    );
+
+  if(!(p>0)){
+
+    p=
+      parseMoneyText(
+        text
+      );
+  }
+
+  if(
+    !(p>0) &&
+    String(
+      x.source||''
+    ).toLowerCase()==='eauction24'
+  ){
+
+    const id=
+      (
+        String(x.url||'')
+          .match(
+            /\/auction\/(\d+)/i
+          )
+        ||[]
+      )[1];
+
+    const match=
+      legacy.rows.find(
+        l=>{
+
+          if(
+            l.auctionUrl===x.url
+          )
+            return true;
+
+          if(
+            !id||
+            !l.auctionUrl
+          )
+            return false;
+
+          return new RegExp(
+            '/'+id+'(?:\\D|$)',
+            'i'
+          ).test(
+            l.auctionUrl
+          );
+        }
       );
 
-    const priceMatch =
-      body.match(/Τιμή:\s*([\d.,]+)\s*€/i);
+    if(match){
 
-    const dateMatch =
-      body.match(
-        /Ημερομηνία πλειστηριασμού:\s*(\d{2}\/\d{2}\/\d{4}(?:\s+\d{2}:\d{2}(?::\d{2})?)?)/i
-      );
-
-    let url = "";
-
-    const hrefMatch =
-      block.match(
-        /href=["']([^"']*\/auction\/[^"']+)["']/i
-      );
-
-    if (hrefMatch) {
-      url = absoluteUrl(
-        hrefMatch[1],
-        BASE
-      );
-    }
-
-    let area = "";
-
-    if (sqmMatch) {
-
-      const pos =
-        body.search(
-          /\d+(?:[.,]\d+)?\s*τ\.?\s*μ\.?/i
+      p=
+        numberValue(
+          match.price
         );
 
-      if (pos > 0) {
-        area =
-          body.substring(0, pos).trim();
-      }
-
-    } else {
-
-      /*
-        Αν δεν υπάρχει διαθέσιμο εμβαδόν,
-        δεν βάζουμε Τιμή/Ημερομηνία μέσα στο area.
-      */
-
-      const pricePos =
-        body.search(/Τιμή:/i);
-
-      if (pricePos > 0) {
-        area =
-          body.substring(0, pricePos).trim();
-      }
-    }
-
-    results.push({
-
-      status: "ΕΝΕΡΓΟ",
-
-      date:
-        dateMatch
-          ? dateMatch[1]
-          : "",
-
-      property:
-        title,
-
-      area,
-
-      sqm:
-        sqmMatch
-          ? numberGR(sqmMatch[1])
-          : null,
-
-      starting_price:
-        priceMatch
-          ? parsePrice(priceMatch[1])
-          : null,
-
-      source:
-        "eAuction24",
-
-      url
-    });
-  }
-
-  return results;
-}
-
-async function getPage(page) {
-
-  const url =
-    page === 1
-      ? BASE
-      : `${BASE}?page=${page}`;
-
-  const r =
-    await fetch(url, {
-      headers: {
-        "Accept": "text/html",
-        "Accept-Language": "el-GR,el;q=0.9"
-      }
-    });
-
-  if (!r.ok) {
-    throw new Error(
-      `eAuction24 page ${page}: HTTP ${r.status}`
-    );
-  }
-
-  return await r.text();
-}
-
-
-/* =========================================================
-   DELFI
-   ========================================================= */
-
-async function getDelfiPage(url) {
-
-  const r =
-    await fetch(url, {
-      headers: {
-        "Accept": "text/html",
-        "Accept-Language": "en-US,en;q=0.9"
-      }
-    });
-
-  if (!r.ok) {
-    throw new Error(
-      `Delfi page HTTP ${r.status}`
-    );
-  }
-
-  return await r.text();
-}
-
-
-function extractDelfiLinks(
-  html,
-  baseUrl
-) {
-
-  const links = [];
-  const seen = new Set();
-
-  const re =
-    /<a\b[^>]*href=["']([^"']*\/en\/property\/[^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
-
-  let m;
-
-  while ((m = re.exec(html)) !== null) {
-
-    const url =
-      absoluteUrl(
-        m[1],
-        baseUrl
-      );
-
-    if (!url || seen.has(url)) {
-      continue;
-    }
-
-    seen.add(url);
-
-    links.push({
-      url,
-      title: clean(m[2])
-    });
-  }
-
-  return links;
-}
-
-
-function extractDelfiPageLinks(
-  html,
-  baseUrl
-) {
-
-  const pages = [baseUrl];
-  const seen = new Set([baseUrl]);
-
-  const re =
-    /href=["']([^"']+)["']/gi;
-
-  let m;
-
-  while ((m = re.exec(html)) !== null) {
-
-    const url =
-      absoluteUrl(
-        m[1],
-        baseUrl
-      );
-
-    if (
-      !url ||
-      !url.includes(
-        "/en/properties/auction/"
+      if(
+        !(x.sqm>0) &&
+        match.area
       )
-    ) {
-      continue;
-    }
+        x.sqm=
+          Number(
+            match.area
+          );
 
-    const sameResidential =
-      baseUrl.includes("/residential") &&
-      url.includes("/residential");
+      if(
+        !x.auction_date &&
+        match.date
+      )
+        x.auction_date=
+          match.date;
 
-    const sameLand =
-      baseUrl.includes("/land") &&
-      url.includes("/land");
-
-    if (
-      !sameResidential &&
-      !sameLand
-    ) {
-      continue;
-    }
-
-    if (
-      !/[?&](page|paged|p)=\d+/i.test(url) &&
-      !/\/page\/\d+/i.test(url)
-    ) {
-      continue;
-    }
-
-    if (seen.has(url)) {
-      continue;
-    }
-
-    seen.add(url);
-    pages.push(url);
-  }
-
-  return pages;
-}
-
-
-function extractDelfiPrice(text) {
-
-  const patterns = [
-
-    /(?:First Bid Price|Starting Bid|Starting Price|Reserved Price|Τιμή Πρώτης Προσφοράς)[^€\d]{0,50}€\s*([\d.,]+)/i,
-
-    /(?:First Bid Price|Starting Bid|Starting Price|Reserved Price|Τιμή Πρώτης Προσφοράς)[^€\d]{0,50}([\d.,]+)\s*€/i,
-
-    /€\s*([\d.,]+)/i
-
-  ];
-
-  for (
-    const pattern of patterns
-  ) {
-
-    const m =
-      text.match(pattern);
-
-    if (!m) continue;
-
-    const n =
-      parsePrice(m[1]);
-
-    if (
-      n !== null &&
-      n > 0
-    ) {
-      return n;
+      if(
+        !x.address &&
+        match.address
+      )
+        x.address=
+          match.address;
     }
   }
 
-  return null;
+  x.price=
+    p>0
+      ? p
+      : null;
+
+  return x;
 }
 
+function segmentOf(r){
 
-function extractDelfiSqm(text) {
+  const t=
+    norm(
+      [
+        r.title,
+        r.address,
+        r.location,
+        r.city,
+        r.region,
+        r.type
+      ]
+      .filter(Boolean)
+      .join(' ')
+    );
 
-  const patterns = [
+  if(
+    [
+      'sindos',
+      'σινδο',
+      'βιπε',
+      'βιομηχαν',
+      'βιοτεχν',
+      'καλοχωρι',
+      'διαβατα',
+      'νεα μαγνησια'
+    ]
+    .some(
+      k=>t.includes(
+        norm(k)
+      )
+    )
+  )
+    return 'sindos_industrial';
 
-    /(?:Living Area|Property Area|Area|Surface|Total Existing Surface)[^0-9]{0,40}([\d.,]+)\s*(?:sq\.?\s*m|sqm|m²|m2)/i,
+  if(
+    [
+      'αθην',
+      'αττικ',
+      'πειραι',
+      'μαρουσι',
+      'κηφισια',
+      'χαλανδρι',
+      'περιστερι',
+      'γλυφαδα',
+      'καλλιθεα',
+      'νεα σμυρνη'
+    ]
+    .some(
+      k=>t.includes(
+        norm(k)
+      )
+    )
+  )
+    return 'athens';
 
-    /(?:Land Area)[^0-9]{0,40}([\d.,]+)\s*(?:sq\.?\s*m|sqm|m²|m2)/i,
+  return 'thessaloniki';
+}
 
-    /([\d.,]+)\s*(?:sq\.?\s*m|sqm|m²|m2)\b/i,
+function sourceBadge(s){
 
-    /([\d.,]+)\s*τ\.?\s*μ\.?/i
+  const cls=
+    s==='Prosperty'
+      ? 'src-p'
+      : s==='iAuction'
+      ? 'src-i'
+      : s==='Delfi'
+      ? 'src-d'
+      : 'src-e';
 
-  ];
+  return `
+    <span class="badge ${cls}">
+      ${esc(s||'—')}
+    </span>
+  `;
+}
 
-  for (
-    const pattern of patterns
-  ) {
+function statusBadge(s){
 
-    const m =
-      text.match(pattern);
+  const x=
+    String(s||'ACTIVE')
+      .toUpperCase();
 
-    if (!m) continue;
+  const cls=
+    x==='NEW'
+      ? 'b-new'
+      : x==='CHANGE'
+      ? 'b-change'
+      : x==='REMOVED'
+      ? 'b-removed'
+      : 'b-active';
 
-    const n =
-      parseDelfiSqmValue(
-        m[1]
+  const label=
+    x==='NEW'
+      ? 'ΝΕΟ'
+      : x==='CHANGE'
+      ? 'ΑΛΛΑΓΗ'
+      : x==='REMOVED'
+      ? 'ΑΦΑΙΡΕΘΗΚΕ'
+      : 'ΕΝΕΡΓΟ';
+
+  return `
+    <span class="badge ${cls}">
+      ${label}
+    </span>
+  `;
+}
+
+function link(r){
+
+  return r.url
+    ? `
+      <a
+        href="${esc(r.url)}"
+        target="_blank"
+        rel="noopener"
+      >
+        Άνοιγμα ↗
+      </a>
+    `
+    : '—';
+}
+
+function filteredLive(){
+
+  const src=
+    $('source').value;
+
+  const seg=
+    $('segment').value;
+
+  const sort=
+    $('sort').value;
+
+  let rows=
+    (feed.items||[])
+      .filter(
+        r=>r.active!==false
+      )
+      .filter(
+        r=>
+          src==='all' ||
+          r.source===src
+      )
+      .filter(
+        r=>
+          seg==='all' ||
+          segmentOf(r)===seg
+      )
+      .filter(
+        r=>
+          status==='all' ||
+          String(
+            r.status||'ACTIVE'
+          ).toUpperCase()===status
+      )
+      .map(enrich);
+
+  rows.sort(
+    (a,b)=>{
+
+      const av=
+        sort.startsWith('sqm')
+          ? a.sqm
+          : a.price;
+
+      const bv=
+        sort.startsWith('sqm')
+          ? b.sqm
+          : b.price;
+
+      if(
+        av==null &&
+        bv==null
+      )
+        return 0;
+
+      if(av==null)
+        return 1;
+
+      if(bv==null)
+        return -1;
+
+      return
+        sort.endsWith('_asc')
+          ? av-bv
+          : bv-av;
+    }
+  );
+
+  return rows;
+}
+
+function renderLive(){
+
+  const active=
+    (feed.items||[])
+      .filter(
+        r=>r.active!==false
       );
 
-    if (n !== null) {
-      return n;
-    }
-  }
+  $('active').textContent=
+    active.length;
 
-  return null;
+  $('newc').textContent=
+    active.filter(
+      r=>
+        String(r.status)
+          .toUpperCase()==='NEW'
+    ).length;
+
+  $('changec').textContent=
+    active.filter(
+      r=>
+        String(r.status)
+          .toUpperCase()==='CHANGE'
+    ).length;
+
+  $('removedc').textContent=
+    (feed.items||[])
+      .filter(
+        r=>
+          String(r.status)
+            .toUpperCase()==='REMOVED'
+      ).length;
+
+  $('updated').textContent=
+    feed.updated_at
+      ? new Date(
+          feed.updated_at
+        ).toLocaleString('el-GR')
+      : '—';
+
+  $('source-status').innerHTML=
+    Object.entries(
+      feed.sources||{}
+    )
+    .map(
+      ([name,s])=>`
+        <span class="chip ${s.ok?'ok':'err'}">
+
+          <strong>
+            ${esc(name)}
+          </strong>:
+
+          ${s.ok?'OK':'ERROR'}
+
+          ·
+
+          ${Number(s.count||0)}
+
+          ${
+            s.error
+              ? ' · '+esc(s.error)
+              : ''
+          }
+
+        </span>
+      `
+    )
+    .join('');
+
+  $('source-links').innerHTML=
+    [
+      [
+        'eAuction.gr',
+        'https://www.eauction.gr/'
+      ],
+      [
+        'iAuction Marketplace',
+        'https://marketplace.iauction.gr/el/all/all/auction/?sort_by=weight.desc&zoom=7&page=1'
+      ],
+      [
+        'Prosperty',
+        'https://theprosperty.com/pwliseis-katoikiwn/'
+      ],
+      [
+        'Delfi Properties',
+        'https://delfiproperties.gr/en'
+      ]
+    ]
+    .map(
+      ([name,url])=>`
+        <a
+          class="pill"
+          href="${url}"
+          target="_blank"
+          rel="noopener"
+        >
+          ${name} ↗
+        </a>
+      `
+    )
+    .join('');
+
+  const rows=
+    filteredLive();
+
+  $('live-body').innerHTML=
+    rows.length
+      ? rows.map(
+          r=>{
+
+            const s=
+              r.sqm;
+
+            const p=
+              r.price;
+
+            const unit=
+              p!=null &&
+              s!=null &&
+              s>0
+                ? p/s
+                : null;
+
+            return `
+              <tr>
+
+                <td>
+                  ${statusBadge(r.status)}
+                </td>
+
+                <td>
+                  ${sourceBadge(r.source)}
+                </td>
+
+                <td>
+
+                  <strong>
+                    ${esc(
+                      r.title||
+                      'Ακίνητο'
+                    )}
+                  </strong>
+
+                  <div class="muted">
+                    ${esc(
+                      (r.flags||[])
+                        .join(' · ')
+                    )}
+                  </div>
+
+                </td>
+
+                <td>
+                  ${esc(
+                    r.address||
+                    '—'
+                  )}
+                </td>
+
+                <td>
+                  ${esc(
+                    r.auction_date||
+                    '—'
+                  )}
+                </td>
+
+                <td>
+                  ${
+                    s!=null
+                      ? fmtNum(s)
+                      : '—'
+                  }
+                </td>
+
+                <td>
+                  <strong>
+                    ${
+                      p!=null
+                        ? fmtMoney(p)
+                        : '—'
+                    }
+                  </strong>
+                </td>
+
+                <td>
+                  ${
+                    unit!=null
+                      ? fmtMoney(unit)
+                      : '—'
+                  }
+                </td>
+
+                <td>
+                  ${link(r)}
+                </td>
+
+              </tr>
+            `;
+          }
+        ).join('')
+      :
+        `
+          <tr>
+            <td colspan="9">
+              Δεν υπάρχουν εγγραφές για τα φίλτρα.
+            </td>
+          </tr>
+        `;
 }
 
+function coords(r){
 
-function extractDelfiDate(text) {
+  if(
+    Number.isFinite(Number(r.lat)) &&
+    Number.isFinite(Number(r.lon))
+  )
+    return [
+      Number(r.lat),
+      Number(r.lon)
+    ];
 
-  const patterns = [
-
-    /Auction Date\s*[:\-]?\s*(\d{1,2}\s+\w+\s+\d{4})/i,
-
-    /Auction Date\s*[:\-]?\s*(\d{1,2}\/\d{1,2}\/\d{4})/i,
-
-    /Auction Date\s*[:\-]?\s*(\d{1,2}\.\d{1,2}\.\d{4})/i,
-
-    /Ημερομηνία Πλειστηριασμού\s*[:\-]?\s*(\d{1,2}[\/.-]\d{1,2}[\/.-]\d{4})/i
-
+  return [
+    40.64,
+    22.96
   ];
+}
 
-  for (
-    const pattern of patterns
-  ) {
+function setupMap(kind){
 
-    const m =
-      text.match(pattern);
+  if(
+    !window.L ||
+    maps[kind]
+  )
+    return;
 
-    if (m) {
-      return m[1];
+  const map=
+    L.map(
+      kind+'-map'
+    )
+    .setView(
+      [40.64,22.96],
+      11
+    );
+
+  L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+      maxZoom:19,
+      attribution:'© OpenStreetMap'
     }
+  )
+  .addTo(map);
+
+  maps[kind]={
+    map,
+    markers:[]
+  };
+
+  setTimeout(
+    ()=>map.invalidateSize(),
+    200
+  );
+
+  renderMap(kind);
+}
+
+function detail(kind,r){
+
+  if(kind==='yield'){
+
+    return `
+      <h3>
+        ${esc(
+          r.address||
+          r.municipality||
+          r.code||
+          'Ακίνητο'
+        )}
+      </h3>
+
+      <div class="metricgrid">
+
+        <div class="metric">
+          <b>
+            ${fmtMoney(r.price)}
+          </b>
+          <span class="muted">
+            Τιμή πρώτης
+          </span>
+        </div>
+
+        <div class="metric">
+          <b>
+            ${fmtMoney(r.rent)}
+          </b>
+          <span class="muted">
+            Ενοίκιο/μήνα
+          </span>
+        </div>
+
+        <div class="metric">
+          <b>
+            ${fmtMoney(r.yieldCapital)}
+          </b>
+          <span class="muted">
+            Κεφάλαιο
+          </span>
+        </div>
+
+        <div class="metric">
+          <b>
+            ${fmtPct(r.netYield)}
+          </b>
+          <span class="muted">
+            Καθαρή απόδοση
+          </span>
+        </div>
+
+      </div>
+
+      <div class="muted">
+
+        ${esc(
+          r.ownership||
+          ''
+        )}
+
+        <br>
+
+        ${
+          r.auctionUrl
+            ? `
+              <a
+                href="${esc(r.auctionUrl)}"
+                target="_blank"
+                rel="noopener"
+              >
+                e-auction ↗
+              </a>
+            `
+            : ''
+        }
+
+      </div>
+    `;
   }
 
-  return "";
+  return `
+    <h3>
+      ${esc(
+        r.address||
+        r.municipality||
+        r.code||
+        'Ακίνητο'
+      )}
+    </h3>
+
+    <div class="metricgrid">
+
+      <div class="metric">
+        <b>
+          ${fmtMoney(r.price)}
+        </b>
+        <span class="muted">
+          Τιμή πρώτης
+        </span>
+      </div>
+
+      <div class="metric">
+        <b>
+          ${fmtMoney(r.resaleValue)}
+        </b>
+        <span class="muted">
+          Αξία μεταπώλησης
+        </span>
+      </div>
+
+      <div class="metric">
+        <b>
+          ${fmtMoney(r.resaleProfit)}
+        </b>
+        <span class="muted">
+          Κέρδος
+        </span>
+      </div>
+
+      <div class="metric">
+        <b>
+          ${fmtPct(r.resaleMargin)}
+        </b>
+        <span class="muted">
+          Περιθώριο
+        </span>
+      </div>
+
+    </div>
+
+    <div class="muted">
+
+      ${esc(
+        r.ownership||
+        ''
+      )}
+
+      <br>
+
+      ${
+        r.auctionUrl
+          ? `
+            <a
+              href="${esc(r.auctionUrl)}"
+              target="_blank"
+              rel="noopener"
+            >
+              e-auction ↗
+            </a>
+          `
+          : ''
+      }
+
+    </div>
+  `;
 }
 
+function rowsFor(kind){
 
-function extractDelfiArea(text) {
+  const rows=
+    legacy.rows.slice();
 
-  const patterns = [
+  if(kind==='yield'){
 
-    /Location:\s*([^|]+)/i,
+    const mode=
+      $('yield-filter').value;
 
-    /Location\s*[:\-]\s*([^\n]+)/i
-
-  ];
-
-  for (
-    const pattern of patterns
-  ) {
-
-    const m =
-      text.match(pattern);
-
-    if (m) {
-      return clean(m[1]);
-    }
-  }
-
-  return "";
-}
-
-
-function extractFromDelfiTitle(title) {
-
-  const t =
-    clean(title);
-
-  const priceMatch =
-    t.match(
-      /€\s*([\d.,]+)|([\d.,]+)\s*€/i
-    );
-
-  const sqmMatch =
-    t.match(
-      /([\d.,]+)\s*(?:sq\.?\s*m|sqm|m²|m2)\b/i
-    );
-
-  return {
-
-    price:
-      priceMatch
-        ? parsePrice(
-            priceMatch[1] ||
-            priceMatch[2]
-          )
-        : null,
-
-    sqm:
-      sqmMatch
-        ? parseDelfiSqmValue(
-            sqmMatch[1]
-          )
-        : null
-  };
-}
-
-
-async function getDelfiProperty(
-  url,
-  fallbackTitle
-) {
-
-  const html =
-    await getDelfiPage(url);
-
-  const text =
-    clean(html);
-
-  const titleData =
-    extractFromDelfiTitle(
-      fallbackTitle || ""
-    );
-
-  return {
-
-    status:
-      "ΕΝΕΡΓΟ",
-
-    date:
-      extractDelfiDate(text),
-
-    property:
-      fallbackTitle ||
-      "Delfi Property",
-
-    area:
-      extractDelfiArea(text),
-
-    sqm:
-      titleData.sqm ??
-      extractDelfiSqm(text),
-
-    starting_price:
-      titleData.price ??
-      extractDelfiPrice(text),
-
-    source:
-      "Delfi Properties",
-
-    url
-  };
-}
-
-
-async function getDelfiSource(
-  baseUrl
-) {
-
-  const firstHtml =
-    await getDelfiPage(
-      baseUrl
-    );
-
-  const pageUrls =
-    extractDelfiPageLinks(
-      firstHtml,
-      baseUrl
-    );
-
-  const htmlPages =
-    [firstHtml];
-
-  if (
-    pageUrls.length > 1
-  ) {
-
-    const extra =
-      await Promise.all(
-        pageUrls
-          .slice(1)
-          .map(
-            url =>
-              getDelfiPage(url)
-          )
+    if(mode==='eligible')
+      return rows.filter(
+        r=>r.yieldEligible
       );
 
-    htmlPages.push(
-      ...extra
+    if(mode==='all')
+      return rows;
+
+    const target=
+      Number(mode)/100;
+
+    return rows.filter(
+      r=>
+        r.yieldEligible &&
+        Number(r.netYield)>=target
     );
   }
 
-  const links =
-    htmlPages.flatMap(
-      html =>
-        extractDelfiLinks(
-          html,
-          baseUrl
+  const mode=
+    $('resale-filter').value;
+
+  if(mode==='eligible')
+    return rows.filter(
+      r=>r.resaleEligible
+    );
+
+  if(mode==='all')
+    return rows;
+
+  const target=
+    Number(mode)/100;
+
+  return rows.filter(
+    r=>
+      r.resaleEligible &&
+      Number(r.resaleMargin)>=target
+  );
+}
+
+function renderMap(kind){
+
+  const st=
+    maps[kind];
+
+  if(!st)
+    return;
+
+  st.markers.forEach(
+    m=>m.remove()
+  );
+
+  st.markers=[];
+
+  const rows=
+    rowsFor(kind);
+
+  const bounds=[];
+
+  for(const r of rows){
+
+    const [
+      lat,
+      lon
+    ]=
+      coords(r);
+
+    const value=
+      kind==='yield'
+        ? r.netYield
+        : r.resaleMargin;
+
+    const target=
+      kind==='yield'
+        ? .06
+        : .30;
+
+    const color=
+      value!=null &&
+      value>=target
+        ? '#16855b'
+        :
+      (
+        kind==='yield' &&
+        r.yieldEligible
+      ) ||
+      (
+        kind==='resale' &&
+        r.resaleEligible
+      )
+        ? '#e28a27'
+        : '#7d8792';
+
+    const mk=
+      L.circleMarker(
+        [lat,lon],
+        {
+          radius:
+            value!=null &&
+            value>=target*2
+              ? 9
+              : 7,
+
+          color:'#fff',
+
+          weight:1.5,
+
+          fillColor:color,
+
+          fillOpacity:.9
+        }
+      )
+      .addTo(st.map);
+
+    mk.bindTooltip(
+      `
+        <strong>
+          ${esc(
+            r.address||
+            r.municipality||
+            r.code||
+            'Ακίνητο'
+          )}
+        </strong>
+
+        <br>
+
+        ${fmtMoney(r.price)}
+
+        ·
+
+        ${fmtNum(r.area)}
+
+        τ.μ.
+      `
+    );
+
+    mk.on(
+      'click',
+      ()=>{
+
+        $(kind+'-detail')
+          .className=
+            'detail';
+
+        $(kind+'-detail')
+          .innerHTML=
+            detail(
+              kind,
+              r
+            );
+      }
+    );
+
+    st.markers.push(
+      mk
+    );
+
+    bounds.push(
+      [lat,lon]
+    );
+  }
+
+  $(kind+'-detail')
+    .textContent=
+      `Εμφανίζονται ${rows.length} σημεία.`;
+
+  if(bounds.length)
+    st.map.fitBounds(
+      bounds,
+      {
+        padding:[20,20],
+        maxZoom:12
+      }
+    );
+}
+
+function renderRank(kind){
+
+  const rows=
+    rowsFor(kind)
+      .sort(
+        (a,b)=>
+          kind==='yield'
+            ?
+              (b.netYield??-99)-
+              (a.netYield??-99)
+            :
+              (b.resaleMargin??-99)-
+              (a.resaleMargin??-99)
+      );
+
+  if(kind==='yield'){
+
+    $('yield-count').textContent=
+      legacy.summary.yieldTop ??
+      rows.filter(
+        r=>r.netYield>=.06
+      ).length;
+
+    $('yield-body').innerHTML=
+      rows
+        .map(
+          (r,i)=>`
+
+            <tr>
+
+              <td>
+                ${i+1}
+              </td>
+
+              <td>
+
+                <strong>
+                  ${esc(
+                    r.code||
+                    ''
+                  )}
+                </strong>
+
+                <br>
+
+                ${esc(
+                  r.address||
+                  r.municipality||
+                  ''
+                )}
+
+              </td>
+
+              <td>
+
+                ${esc(
+                  r.type||
+                  ''
+                )}
+
+                <br>
+
+                ${fmtNum(r.area)}
+                τ.μ.
+
+              </td>
+
+              <td>
+                ${fmtMoney(r.price)}
+              </td>
+
+              <td>
+                ${fmtMoney(r.rent)}
+              </td>
+
+              <td>
+                ${fmtPct(r.netYield)}
+              </td>
+
+              <td>
+                ${r.rentComps??0}
+              </td>
+
+            </tr>
+
+          `
         )
-    );
+        .join('');
 
-  const uniqueLinks = [];
-  const seen = new Set();
-
-  for (
-    const item of links
-  ) {
-
-    if (
-      seen.has(item.url)
-    ) {
-      continue;
-    }
-
-    seen.add(item.url);
-
-    uniqueLinks.push(item);
+    return;
   }
 
-  const rows =
-    await Promise.all(
+  $('resale-count').textContent=
+    legacy.summary.resaleTop ??
+    rows.filter(
+      r=>r.resaleMargin>=.30
+    ).length;
 
-      uniqueLinks.map(
-        async item => {
+  $('resale-body').innerHTML=
+    rows
+      .map(
+        (r,i)=>`
 
-          try {
+          <tr>
 
-            return await getDelfiProperty(
-              item.url,
-              item.title
+            <td>
+              ${i+1}
+            </td>
+
+            <td>
+
+              <strong>
+                ${esc(
+                  r.code||
+                  ''
+                )}
+              </strong>
+
+              <br>
+
+              ${esc(
+                r.address||
+                r.municipality||
+                ''
+              )}
+
+            </td>
+
+            <td>
+
+              ${esc(
+                r.type||
+                ''
+              )}
+
+              <br>
+
+              ${fmtNum(r.area)}
+              τ.μ.
+
+            </td>
+
+            <td>
+              ${fmtMoney(r.price)}
+            </td>
+
+            <td>
+              ${fmtMoney(r.resaleValue)}
+            </td>
+
+            <td>
+              ${fmtMoney(r.resaleProfit)}
+            </td>
+
+            <td>
+              ${fmtPct(r.resaleMargin)}
+            </td>
+
+          </tr>
+
+        `
+      )
+      .join('');
+}
+
+async function loadLegacy(){
+
+  try{
+
+    const response=
+      await fetch(
+        LEGACY_RAW+
+        '?v='+
+        Date.now(),
+        {
+          cache:'no-store'
+        }
+      );
+
+    if(!response.ok)
+      throw new Error(
+        'legacy '+response.status
+      );
+
+    const html=
+      await response.text();
+
+    const doc=
+      new DOMParser()
+        .parseFromString(
+          html,
+          'text/html'
+        );
+
+    const node=
+      doc.getElementById(
+        'legacy-data'
+      );
+
+    if(!node)
+      throw new Error(
+        'Δεν βρέθηκε legacy-data'
+      );
+
+    legacy=
+      JSON.parse(
+        node.textContent
+      );
+
+    $('stat-eligible').textContent=
+      legacy.summary.yieldEligible ??
+      0;
+
+    $('stat-yield').textContent=
+      legacy.summary.yieldTop ??
+      0;
+
+    $('stat-resale').textContent=
+      legacy.summary.resaleTop ??
+      0;
+
+    renderRank('yield');
+    renderRank('resale');
+
+  }catch(e){
+
+    console.warn(
+      'Legacy data unavailable',
+      e
+    );
+  }
+}
+
+async function load(){
+
+  let liveOk=false;
+
+  try{
+
+    const controller=
+      new AbortController();
+
+    const timeout=
+      setTimeout(
+        ()=>controller.abort(),
+        20000
+      );
+
+    const response=
+      await fetch(
+        LIVE+
+        '?v='+
+        Date.now(),
+        {
+          cache:'no-store',
+          signal:controller.signal
+        }
+      );
+
+    clearTimeout(timeout);
+
+    if(!response.ok)
+      throw new Error(
+        'LIVE '+response.status
+      );
+
+    const data=
+      await response.json();
+
+    if(
+      !data ||
+      !Array.isArray(
+        data.items
+      )
+    )
+      throw new Error(
+        'Μη έγκυρα LIVE δεδομένα'
+      );
+
+    feed=data;
+
+    liveOk=true;
+
+  }catch(e){
+
+    console.warn(
+      'LIVE Worker failed',
+      e
+    );
+
+    try{
+
+      const response=
+        await fetch(
+          './data/current.json?v='+
+          Date.now(),
+          {
+            cache:'no-store'
+          }
+        );
+
+      if(!response.ok)
+        throw new Error(
+          'current.json '+response.status
+        );
+
+      feed=
+        await response.json();
+
+    }catch(err){
+
+      console.error(
+        'Fallback failed',
+        err
+      );
+
+      feed={
+        items:[],
+        sources:{}
+      };
+    }
+  }
+
+  renderLive();
+
+  $('stat-total').textContent=
+    (feed.items||[])
+      .filter(
+        r=>r.active!==false
+      ).length;
+
+  if(!liveOk){
+
+    const note=
+      document.createElement(
+        'span'
+      );
+
+    note.className=
+      'chip err';
+
+    note.textContent=
+      'LIVE προσωρινά μη διαθέσιμο — εμφανίζονται τα τελευταία αποθηκευμένα δεδομένα.';
+
+    $('source-status')
+      .appendChild(note);
+  }
+
+  if(
+    maps.yield
+  )
+    renderMap('yield');
+
+  if(
+    maps.resale
+  )
+    renderMap('resale');
+}
+
+/* tabs */
+
+document
+  .querySelectorAll('.tab')
+  .forEach(
+    button=>
+      button.addEventListener(
+        'click',
+        ()=>{
+
+          document
+            .querySelectorAll('.tab')
+            .forEach(
+              x=>
+                x.classList.toggle(
+                  'active',
+                  x===button
+                )
             );
 
-          } catch {
+          document
+            .querySelectorAll('.panel')
+            .forEach(
+              panel=>
+                panel.classList.toggle(
+                  'active',
+                  panel.id===
+                  button.dataset.panel
+                )
+            );
 
-            const titleData =
-              extractFromDelfiTitle(
-                item.title || ""
-              );
+          const kind=
+            button.dataset.panel;
 
-            return {
+          if(
+            (
+              kind==='yield' ||
+              kind==='resale'
+            ) &&
+            !maps[kind]
+          ){
 
-              status:
-                "ΕΝΕΡΓΟ",
+            setupMap(
+              kind
+            );
+          }
 
-              date:
-                "",
+          if(maps[kind]){
 
-              property:
-                item.title ||
-                "Delfi Property",
+            setTimeout(
+              ()=>maps[kind]
+                .map
+                .invalidateSize(),
+              150
+            );
 
-              area:
-                "",
-
-              sqm:
-                titleData.sqm,
-
-              starting_price:
-                titleData.price,
-
-              source:
-                "Delfi Properties",
-
-              url:
-                item.url
-            };
+            renderMap(
+              kind
+            );
           }
         }
       )
-    );
+  );
 
-  return {
-    rows,
-    pages:
-      pageUrls.length
-  };
-}
+/* status filters */
 
+document
+  .querySelectorAll(
+    '[data-status]'
+  )
+  .forEach(
+    button=>
+      button.addEventListener(
+        'click',
+        ()=>{
 
-/* =========================================================
-   MAIN WORKER
-   ========================================================= */
-
-export default {
-
-  async fetch(request) {
-
-    try {
-
-      /* eAuction24 */
-
-      const first =
-        await getPage(1);
-
-      let maxPage = 1;
-
-      for (
-        const m of first.matchAll(
-          /[?&]page=(\d+)/g
-        )
-      ) {
-
-        maxPage =
-          Math.max(
-            maxPage,
-            Number(m[1])
-          );
-      }
-
-      const htmlPages =
-        [first];
-
-      if (
-        maxPage > 1
-      ) {
-
-        const rest =
-          await Promise.all(
-
-            Array.from(
-              {
-                length:
-                  maxPage - 1
-              },
-
-              (_, i) =>
-                getPage(
-                  i + 2
-                )
+          document
+            .querySelectorAll(
+              '[data-status]'
             )
-          );
+            .forEach(
+              x=>
+                x.classList.toggle(
+                  'active',
+                  x===button
+                )
+            );
 
-        htmlPages.push(
-          ...rest
-        );
-      }
+          status=
+            button.dataset.status;
 
-      const eauctionRows =
-        htmlPages.flatMap(
-          parseCards
-        );
+          renderLive();
+        }
+      )
+  );
 
+/* live filters */
 
-      /* Delfi */
+$('source')
+  .addEventListener(
+    'change',
+    renderLive
+  );
 
-      let delfiResidential = [];
-      let delfiLand = [];
+$('segment')
+  .addEventListener(
+    'change',
+    renderLive
+  );
 
-      let delfiResidentialPages = 0;
-      let delfiLandPages = 0;
+$('sort')
+  .addEventListener(
+    'change',
+    renderLive
+  );
 
-      let delfiError = "";
+$('refresh')
+  .addEventListener(
+    'click',
+    load
+  );
 
+/* maps */
 
-      try {
+$('yield-filter')
+  .addEventListener(
+    'change',
+    ()=>{
+      renderRank('yield');
 
-        const result =
-          await getDelfiSource(
-            DELFI_RESIDENTIAL
-          );
+      if(!maps.yield)
+        setupMap('yield');
 
-        delfiResidential =
-          result.rows;
+      renderMap('yield');
+    }
+  );
 
-        delfiResidentialPages =
-          result.pages;
+$('resale-filter')
+  .addEventListener(
+    'change',
+    ()=>{
+      renderRank('resale');
 
-      } catch (e) {
+      if(!maps.resale)
+        setupMap('resale');
 
-        delfiError =
-          String(
-            e.message || e
-          );
-      }
+      renderMap('resale');
+    }
+  );
 
+document
+  .querySelectorAll(
+    '[data-fit]'
+  )
+  .forEach(
+    button=>
+      button.addEventListener(
+        'click',
+        ()=>{
 
-      try {
+          const kind=
+            button.dataset.fit;
 
-        const result =
-          await getDelfiSource(
-            DELFI_LAND
-          );
+          if(!maps[kind])
+            setupMap(kind);
 
-        delfiLand =
-          result.rows;
+          const st=
+            maps[kind];
 
-        delfiLandPages =
-          result.pages;
+          if(!st)
+            return;
 
-      } catch (e) {
+          const rs=
+            rowsFor(kind)
+              .map(
+                coords
+              );
 
-        if (!delfiError) {
-
-          delfiError =
-            String(
-              e.message || e
+          if(rs.length)
+            st.map.fitBounds(
+              rs,
+              {
+                padding:[20,20],
+                maxZoom:12
+              }
             );
         }
-      }
+      )
+  );
 
+/* excel */
 
-      /* Combine */
+$('download')
+  .addEventListener(
+    'click',
+    ()=>{
 
-      const all = [
+      const rows=
+        filteredLive();
 
-        ...eauctionRows,
+      const html=
+        `
+        <html>
+        <head>
+          <meta charset="UTF-8">
+        </head>
 
-        ...delfiResidential,
+        <body>
 
-        ...delfiLand
+        <table border="1">
 
-      ];
+          <tr>
+            <th>Status</th>
+            <th>Source</th>
+            <th>Title</th>
+            <th>Area</th>
+            <th>Date</th>
+            <th>Sqm</th>
+            <th>Price</th>
+            <th>PricePerSqm</th>
+            <th>URL</th>
+          </tr>
 
+          ${
+            rows
+              .map(
+                r=>{
 
-      /* Remove duplicates */
+                  const unit=
+                    r.price!=null &&
+                    r.sqm!=null &&
+                    r.sqm>0
+                      ? (
+                          r.price/
+                          r.sqm
+                        ).toFixed(2)
+                      : '';
 
-      const unique = [];
-      const seen = new Set();
+                  return `
+                    <tr>
 
-      for (
-        const x of all
-      ) {
+                      <td>
+                        ${esc(
+                          r.status||
+                          'ACTIVE'
+                        )}
+                      </td>
 
-        const key =
-          x.url ||
-          `${x.source}|${x.property}|${x.area}|${x.date}|${x.starting_price}`;
+                      <td>
+                        ${esc(
+                          r.source||
+                          ''
+                        )}
+                      </td>
 
-        if (
-          seen.has(key)
-        ) {
-          continue;
-        }
+                      <td>
+                        ${esc(
+                          r.title||
+                          ''
+                        )}
+                      </td>
 
-        seen.add(key);
+                      <td>
+                        ${esc(
+                          r.address||
+                          ''
+                        )}
+                      </td>
 
-        unique.push(x);
-      }
+                      <td>
+                        ${esc(
+                          r.auction_date||
+                          ''
+                        )}
+                      </td>
 
+                      <td>
+                        ${esc(
+                          r.sqm??
+                          ''
+                        )}
+                      </td>
 
-      /* Counts */
+                      <td>
+                        ${esc(
+                          r.price??
+                          ''
+                        )}
+                      </td>
 
-      const eauctionCount =
-        unique.filter(
-          x =>
-            x.source ===
-            "eAuction24"
-        ).length;
+                      <td>
+                        ${unit}
+                      </td>
 
-      const delfiCount =
-        unique.filter(
-          x =>
-            x.source ===
-            "Delfi Properties"
-        ).length;
+                      <td>
+                        ${esc(
+                          r.url||
+                          ''
+                        )}
+                      </td>
 
-
-      /* Response */
-
-      return new Response(
-
-        JSON.stringify(
-
-          {
-
-            updated_at:
-              new Date().toLocaleString(
-                "el-GR",
-                {
-                  timeZone:
-                    "Europe/Athens"
+                    </tr>
+                  `;
                 }
-              ),
+              )
+              .join('')
+          }
 
-            active_count:
-              unique.length,
+        </table>
 
-            eauction24_count:
-              eauctionCount,
+        </body>
+        </html>
+        `;
 
-            delfi_count:
-              delfiCount,
+      const blob=
+        new Blob(
+          [html],
+          {
+            type:
+              'application/vnd.ms-excel'
+          }
+        );
 
-            new_count:
-              0,
+      const a=
+        document.createElement(
+          'a'
+        );
 
-            changed_count:
-              0,
+      a.href=
+        URL.createObjectURL(
+          blob
+        );
 
-            removed_count:
-              0,
+      a.download=
+        'C_H_Auction_Radar_LIVE.xls';
 
-            pages_checked:
-              maxPage,
+      a.click();
 
-            delfi_sources: {
+      setTimeout(
+        ()=>{
+          URL.revokeObjectURL(
+            a.href
+          );
+        },
+        1000
+      );
+    }
+  );
 
-              residential:
-                delfiResidential.length,
+/*
+  ΣΗΜΑΝΤΙΚΟ:
+  ΠΡΩΤΑ φορτώνουμε LIVE.
+  Μετά φορτώνουμε το παλιό dataset.
+  Ο χάρτης δεν εμποδίζει τη LIVE λίστα.
+*/
 
-              land:
-                delfiLand.length,
+(async()=>{
 
-              residential_pages:
-                delfiResidentialPages,
+  await load();
 
-              land_pages:
-                delfiLandPages
+  await loadLegacy();
 
-            },
+  if(
+    window.L
+  ){
 
-            delfi_error:
-              delfiError,
+    try{
 
-            rows:
-              unique
-
-          },
-
-          null,
-
-          2
-
-        ),
-
-        {
-
-          status:
-            200,
-
-          headers:
-            cors
-
-        }
-
+      setupMap(
+        'yield'
       );
 
-    } catch (e) {
+      setupMap(
+        'resale'
+      );
 
-      return new Response(
+    }catch(e){
 
-        JSON.stringify(
-
-          {
-
-            ok:
-              false,
-
-            error:
-              String(
-                e.message || e
-              )
-
-          },
-
-          null,
-
-          2
-
-        ),
-
-        {
-
-          status:
-            500,
-
-          headers:
-            cors
-
-        }
-
+      console.warn(
+        'Map initialization failed',
+        e
       );
     }
   }
-};
+
+  setInterval(
+    load,
+    5*60*1000
+  );
+
+})();
+
+})();
+</script>
+
+</body>
+</html>
