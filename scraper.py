@@ -52,6 +52,15 @@ PROSPERTY_PAGES = [
 ]
 # Public Delfi Properties catalogue pages. We try the documented public English
 # paths first and the Greek equivalents as a second pass. No proxy/bypass is used.
+# External source links requested for the Radar UI. These are reference/search pages;
+# they are not counted as scraped LIVE sources unless a parser is enabled for them.
+SOURCE_LINKS = [
+    {"name": "eAuction.gr", "url": "https://www.eauction.gr/"},
+    {"name": "iAuction Marketplace", "url": "https://marketplace.iauction.gr/el/all/all/auction/?sort_by=weight.desc&zoom=7&page=1"},
+    {"name": "Prosperty", "url": "https://theprosperty.com/pwliseis-katoikiwn/"},
+    {"name": "Delfi Properties", "url": "https://delfiproperties.gr/en"},
+]
+
 DELFI_PAGES = [
     "https://delfiproperties.gr/en/properties/auction/residential",
     "https://delfiproperties.gr/en/properties/auction/land",
@@ -809,7 +818,7 @@ def main() -> int:
     history["updated_at"] = now
     history["last_week_key"] = week
     dump_json(HISTORY_FILE, history)
-    dump_json(CURRENT_FILE, {"updated_at":now,"week":week,"sources":source_meta,"items":current})
+    dump_json(CURRENT_FILE, {"updated_at":now,"week":week,"sources":source_meta,"source_links":SOURCE_LINKS,"items":current})
     if not WEEKLY_INDEX_FILE.exists():
         dump_json(WEEKLY_INDEX_FILE, weekly_index)
 
