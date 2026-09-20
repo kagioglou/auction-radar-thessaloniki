@@ -1,1 +1,11 @@
-{"snapshots":[]}
+{
+  "snapshots": [
+    {
+      "week": "2026-W38",
+      "saved_at": "2026-09-21T00:26:00+03:00",
+      "total_records": 243,
+      "new_records": 243,
+      "file": "./data/weekly/2026-W38.json"
+    }
+  ]
+}
