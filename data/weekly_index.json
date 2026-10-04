@@ -1,6 +1,13 @@
 {
   "snapshots": [
     {
+      "week": "2026-W40",
+      "saved_at": "2026-10-05T00:28:07+03:00",
+      "total_records": 281,
+      "new_records": 23,
+      "file": "./data/weekly/2026-W40.json"
+    },
+    {
       "week": "2026-W39",
       "saved_at": "2026-09-28T00:27:11+03:00",
       "total_records": 258,
